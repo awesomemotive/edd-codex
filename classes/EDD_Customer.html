@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>Easy Digital Downloads API Documentation</title>
+    <meta name="author" content="Easy Digital Downloads"/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">
+                <img class="edd-logo" src="https://8333-presscdn-0-98-pagely.netdna-ssl.com/wp-content/themes/edd-v2/images/edd-logo.svg" alt="Easy Digital Downloads" data-fallback="https://8333-presscdn-0-98-pagely.netdna-ssl.com/wp-content/themes/edd-v2/images/edd-logo.png" width="308" height="50">
+            </a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/PayWithAmazon.html">\PayWithAmazon</a></li>
+                                                    </ul>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-17007431"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-17007431" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2023557717"></a>
+                                <a href="../namespaces/PayWithAmazon.html" style="margin-left: 30px; padding-left: 0">PayWithAmazon</a>
+            </div>
+            <div id="namespace-2023557717" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.ClientInterface.html">ClientInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.HttpCurlInterface.html">HttpCurlInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.IpnHandlerInterface.html">IpnHandlerInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.ResponseInterface.html">ResponseInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/PayWithAmazon.Client.html">Client</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.EDD_Amazon_Payments.html">EDD_Amazon_Payments</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.HttpCurl.html">HttpCurl</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.IpnHandler.html">IpnHandler</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.ResponseParser.html">ResponseParser</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Easy_Digital_Downloads.html">Easy_Digital_Downloads</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API.html">EDD_API</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_Keys_Table.html">EDD_API_Keys_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_Request_Log_Table.html">EDD_API_Request_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_V1.html">EDD_API_V1</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_V2.html">EDD_API_V2</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Customers_Export.html">EDD_Batch_Customers_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Downloads_Export.html">EDD_Batch_Downloads_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Downloads_Import.html">EDD_Batch_Downloads_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Export.html">EDD_Batch_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_File_Downloads_Export.html">EDD_Batch_File_Downloads_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Import.html">EDD_Batch_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Payments_Export.html">EDD_Batch_Payments_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Payments_Import.html">EDD_Batch_Payments_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Cache_Helper.html">EDD_Cache_Helper</a></li>
+                                                    <li class="class"><a href="../classes/edd_cart_widget.html">edd_cart_widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Categories_Reports_Table.html">EDD_Categories_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/edd_categories_tags_widget.html">edd_categories_tags_widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_CLI.html">EDD_CLI</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Cron.html">EDD_Cron</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customer.html">EDD_Customer</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customer_Reports_Table.html">EDD_Customer_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customers_Export.html">EDD_Customers_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB.html">EDD_DB</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB_Customer_Meta.html">EDD_DB_Customer_Meta</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB_Customers.html">EDD_DB_Customers</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Discount_Codes_Table.html">EDD_Discount_Codes_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download.html">EDD_Download</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download_History_Export.html">EDD_Download_History_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download_Reports_Table.html">EDD_Download_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Earnings_Export.html">EDD_Earnings_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Email_Template_Tags.html">EDD_Email_Template_Tags</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Emails.html">EDD_Emails</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Export.html">EDD_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Fees.html">EDD_Fees</a></li>
+                                                    <li class="class"><a href="../classes/EDD_File_Downloads_Log_Table.html">EDD_File_Downloads_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Gateawy_Reports_Table.html">EDD_Gateawy_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Gateway_Error_Log_Table.html">EDD_Gateway_Error_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Graph.html">EDD_Graph</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Heartbeat.html">EDD_Heartbeat</a></li>
+                                                    <li class="class"><a href="../classes/EDD_HTML_Elements.html">EDD_HTML_Elements</a></li>
+                                                    <li class="class"><a href="../classes/EDD_License.html">EDD_License</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Logging.html">EDD_Logging</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Notices.html">EDD_Notices</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment.html">EDD_Payment</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment_History_Table.html">EDD_Payment_History_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment_Stats.html">EDD_Payment_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payments_Export.html">EDD_Payments_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payments_Query.html">EDD_Payments_Query</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Pie_Graph.html">EDD_Pie_Graph</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Product_Details_Widget.html">EDD_Product_Details_Widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Register_Meta.html">EDD_Register_Meta</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Roles.html">EDD_Roles</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Sales_Log_Table.html">EDD_Sales_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Session.html">EDD_Session</a></li>
+                                                    <li class="class"><a href="../classes/EDD_SL_Plugin_Updater.html">EDD_SL_Plugin_Updater</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Stats.html">EDD_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_All_Stats.html">EDD_Tools_Recount_All_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Customer_Stats.html">EDD_Tools_Recount_Customer_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Download_Stats.html">EDD_Tools_Recount_Download_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Single_Customer_Stats.html">EDD_Tools_Recount_Single_Customer_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Store_Earnings.html">EDD_Tools_Recount_Store_Earnings</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Reset_Stats.html">EDD_Tools_Reset_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tracking.html">EDD_Tracking</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Welcome.html">EDD_Welcome</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/default.html">\</a> <i class="icon-level-up"></i>
+                                            </nav>
+
+                    <h1><small>\</small>EDD_Customer</h1>
+                    <p><em>EDD_Customer Class</em></p>
+                    
+
+                    
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/EDD_Customer.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method___get" class="">__get()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_create" class="">create()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_update" class="">update()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_add_email" class="">add_email()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_remove_email" class="">remove_email()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_set_primary_email" class="">set_primary_email()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_get_payment_ids" class="">get_payment_ids()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_get_payments" class="">get_payments()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_attach_payment" class="">attach_payment()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_remove_payment" class="">remove_payment()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_increase_purchase_count" class="">increase_purchase_count()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_decrease_purchase_count" class="">decrease_purchase_count()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_increase_value" class="">increase_value()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_decrease_value" class="">decrease_value()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_get_notes" class="">get_notes()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_get_notes_count" class="">get_notes_count()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_add_note" class="">add_note()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_get_meta" class="">get_meta()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_add_meta" class="">add_meta()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_update_meta" class="">update_meta()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_delete_meta" class="">delete_meta()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/EDD_Customer.html#property_id" class="">$id</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#property_purchase_count" class="">$purchase_count</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#property_purchase_value" class="">$purchase_value</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#property_email" class="">$email</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#property_emails" class="">$emails</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#property_name" class="">$name</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#property_date_created" class="">$date_created</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#property_payment_ids" class="">$payment_ids</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#property_user_id" class="">$user_id</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#property_notes" class="">$notes</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/EDD_Customer.html#property_db" class="">$db</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <a href="../classes/EDD_Customer.html#method_setup_customer" class="">setup_customer()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_get_raw_notes" class="">get_raw_notes()</a><br />
+                                                                    <a href="../classes/EDD_Customer.html#method_sanitize_columns" class="">sanitize_columns()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/includes.class-edd-customer.html"><div class="path-wrapper">includes/class-edd-customer.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">EDD</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\EDD_Customer</div>
+                            </dd>
+
+                        
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                since
+                            </th>
+                            <td>
+                                                                    
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_id" name="property_id" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$id</h3>
+                <pre class="signature">$id : </pre>
+                <p><em>The customer ID</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_purchase_count" name="property_purchase_count" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$purchase_count</h3>
+                <pre class="signature">$purchase_count : </pre>
+                <p><em>The customer&#039;s purchase count</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_purchase_value" name="property_purchase_value" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$purchase_value</h3>
+                <pre class="signature">$purchase_value : </pre>
+                <p><em>The customer&#039;s lifetime value</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_email" name="property_email" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$email</h3>
+                <pre class="signature">$email : </pre>
+                <p><em>The customer&#039;s primary email</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_emails" name="property_emails" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$emails</h3>
+                <pre class="signature">$emails : </pre>
+                <p><em>The customer&#039;s emails</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_name" name="property_name" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$name</h3>
+                <pre class="signature">$name : </pre>
+                <p><em>The customer&#039;s name</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_date_created" name="property_date_created" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$date_created</h3>
+                <pre class="signature">$date_created : </pre>
+                <p><em>The customer&#039;s creation date</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_payment_ids" name="property_payment_ids" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$payment_ids</h3>
+                <pre class="signature">$payment_ids : </pre>
+                <p><em>The payment IDs associated with the customer</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_user_id" name="property_user_id" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$user_id</h3>
+                <pre class="signature">$user_id : </pre>
+                <p><em>The user ID associated with the customer</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_notes" name="property_notes" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$notes</h3>
+                <pre class="signature">$notes : </pre>
+                <p><em>Customer Notes</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_db" name="property_db" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$db</h3>
+                <pre class="signature">$db : </pre>
+                <p><em>The Database Abstraction</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <pre class="signature">__construct(  <span class="argument">$_id_or_email = false</span>,   <span class="argument">$by_user_id = false</span>) </pre>
+                <p><em>Get things going</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$_id_or_email </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$by_user_id </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___get" name="method___get" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__get()</h3>
+                <pre class="signature">__get(  <span class="argument">$key</span>) </pre>
+                <p><em>Magic __get function to dispatch a call to retrieve a private property</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_create" name="method_create" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">create()</h3>
+                <pre class="signature">create(array  <span class="argument">$data = array()</span>) : mixed</pre>
+                <p><em>Creates a customer</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$data </td>
+                                <td><p>Array of attributes for a customer</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                            &mdash; <p>False if not a valid creation, Customer ID if user is found or valid creation</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_update" name="method_update" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">update()</h3>
+                <pre class="signature">update(array  <span class="argument">$data = array()</span>) : boolean</pre>
+                <p><em>Update a customer record</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$data </td>
+                                <td><p>Array of data attributes for a customer (checked via whitelist)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>If the update was successful or not</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_add_email" name="method_add_email" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">add_email()</h3>
+                <pre class="signature">add_email(string  <span class="argument">$email = &#039;&#039;</span>, boolean  <span class="argument">$primary = false</span>) : boolean</pre>
+                <p><em>Attach an email to the customer</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$email </td>
+                                <td><p>The email address to remove from the customer</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$primary </td>
+                                <td><p>Allows setting the email added as the primary</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>If the email was added successfully</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_remove_email" name="method_remove_email" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">remove_email()</h3>
+                <pre class="signature">remove_email(string  <span class="argument">$email = &#039;&#039;</span>) : boolean</pre>
+                <p><em>Remove an email from the customer</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$email </td>
+                                <td><p>The email address to remove from the customer</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>If the email was removeed successfully</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_set_primary_email" name="method_set_primary_email" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">set_primary_email()</h3>
+                <pre class="signature">set_primary_email(string  <span class="argument">$new_primary_email = &#039;&#039;</span>) : boolean</pre>
+                <p><em>Set an email address as the customer&#039;s primary email</em></p>
+                <p>This will move the customer's previous primary email to an additional email</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$new_primary_email </td>
+                                <td><p>The email address to remove from the customer</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>If the email was set as primary successfully</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_payment_ids" name="method_get_payment_ids" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">get_payment_ids()</h3>
+                <pre class="signature">get_payment_ids() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_payments" name="method_get_payments" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">get_payments()</h3>
+                <pre class="signature">get_payments(  <span class="argument">$status = array()</span>) </pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$status </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_attach_payment" name="method_attach_payment" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">attach_payment()</h3>
+                <pre class="signature">attach_payment(integer  <span class="argument">$payment_id</span>, boolean  <span class="argument">$update_stats = true</span>) : boolean</pre>
+                <p><em>Attach payment to the customer then triggers increasing stats</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$payment_id </td>
+                                <td><p>The payment ID to attach to the customer</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$update_stats </td>
+                                <td><p>For backwards compatibility, if we should increase the stats or not</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>If the attachment was successfuly</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_remove_payment" name="method_remove_payment" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">remove_payment()</h3>
+                <pre class="signature">remove_payment(integer  <span class="argument">$payment_id</span>, boolean  <span class="argument">$update_stats = true</span>) : boolean</pre>
+                <p><em>Remove a payment from this customer, then triggers reducing stats</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$payment_id </td>
+                                <td><p>The Payment ID to remove</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$update_stats </td>
+                                <td><p>For backwards compatibility, if we should increase the stats or not</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>If the removal was successful</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_increase_purchase_count" name="method_increase_purchase_count" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">increase_purchase_count()</h3>
+                <pre class="signature">increase_purchase_count(integer  <span class="argument">$count = 1</span>) : integer</pre>
+                <p><em>Increase the purchase count of a customer</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$count </td>
+                                <td><p>The number to imcrement by</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The purchase count</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_decrease_purchase_count" name="method_decrease_purchase_count" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">decrease_purchase_count()</h3>
+                <pre class="signature">decrease_purchase_count(integer  <span class="argument">$count = 1</span>) : mixed</pre>
+                <p><em>Decrease the customer purchase count</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$count </td>
+                                <td><p>The amount to decrease by</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                            &mdash; <p>If successful, the new count, otherwise false</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_increase_value" name="method_increase_value" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">increase_value()</h3>
+                <pre class="signature">increase_value(float  <span class="argument">$value = 0.0</span>) : mixed</pre>
+                <p><em>Increase the customer&#039;s lifetime value</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$value </td>
+                                <td><p>The value to increase by</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                            &mdash; <p>If successful, the new value, otherwise false</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_decrease_value" name="method_decrease_value" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">decrease_value()</h3>
+                <pre class="signature">decrease_value(float  <span class="argument">$value = 0.0</span>) : mixed</pre>
+                <p><em>Decrease a customer&#039;s lifetime value</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$value </td>
+                                <td><p>The value to decrease by</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                            &mdash; <p>If successful, the new value, otherwise false</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_notes" name="method_get_notes" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">get_notes()</h3>
+                <pre class="signature">get_notes(integer  <span class="argument">$length = 20</span>, integer  <span class="argument">$paged = 1</span>) : array</pre>
+                <p><em>Get the parsed notes for a customer as an array</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$length </td>
+                                <td><p>The number of notes to get</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$paged </td>
+                                <td><p>What note to start at</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>The notes requsted</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_notes_count" name="method_get_notes_count" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">get_notes_count()</h3>
+                <pre class="signature">get_notes_count() : integer</pre>
+                <p><em>Get the total number of notes we have after parsing</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The number of notes for the customer</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_add_note" name="method_add_note" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">add_note()</h3>
+                <pre class="signature">add_note(string  <span class="argument">$note = &#039;&#039;</span>) : string|boolean</pre>
+                <p><em>Add a note for the customer</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$note </td>
+                                <td><p>The note to add</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string|boolean
+                                            &mdash; <p>The new note if added succesfully, false otherwise</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_meta" name="method_get_meta" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">get_meta()</h3>
+                <pre class="signature">get_meta(string  <span class="argument">$meta_key = &#039;&#039;</span>, boolean  <span class="argument">$single = true</span>) : mixed</pre>
+                <p><em>Retrieve customer meta field for a customer.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$meta_key </td>
+                                <td><p>The meta key to retrieve.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$single </td>
+                                <td><p>Whether to return a single value.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                            &mdash; <p>Will be an array if $single is false. Will be value of meta data field if $single is true.</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_add_meta" name="method_add_meta" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">add_meta()</h3>
+                <pre class="signature">add_meta(string  <span class="argument">$meta_key = &#039;&#039;</span>, mixed  <span class="argument">$meta_value</span>, boolean  <span class="argument">$unique = false</span>) : boolean</pre>
+                <p><em>Add meta data field to a customer.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$meta_key </td>
+                                <td><p>Metadata name.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$meta_value </td>
+                                <td><p>Metadata value.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$unique </td>
+                                <td><p>Optional, default is false. Whether the same key should not be added.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>False for failure. True for success.</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_update_meta" name="method_update_meta" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">update_meta()</h3>
+                <pre class="signature">update_meta(string  <span class="argument">$meta_key = &#039;&#039;</span>, mixed  <span class="argument">$meta_value</span>, mixed  <span class="argument">$prev_value = &#039;&#039;</span>) : boolean</pre>
+                <p><em>Update customer meta field based on customer ID.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$meta_key </td>
+                                <td><p>Metadata key.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$meta_value </td>
+                                <td><p>Metadata value.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$prev_value </td>
+                                <td><p>Optional. Previous value to check before removing.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>False on failure, true if success.</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_delete_meta" name="method_delete_meta" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">delete_meta()</h3>
+                <pre class="signature">delete_meta(string  <span class="argument">$meta_key = &#039;&#039;</span>, mixed  <span class="argument">$meta_value = &#039;&#039;</span>) : boolean</pre>
+                <p><em>Remove metadata matching criteria from a customer.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$meta_key </td>
+                                <td><p>Metadata name.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$meta_value </td>
+                                <td><p>Optional. Metadata value.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>False for failure. True for success.</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_customer" name="method_setup_customer" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_customer()</h3>
+                <pre class="signature">setup_customer(object  <span class="argument">$customer</span>) : boolean</pre>
+                <p><em>Given the customer data, let&#039;s set the variables</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>object</td>
+                                <td>$customer </td>
+                                <td><p>The Customer Object</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>If the setup was successful or not</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_raw_notes" name="method_get_raw_notes" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_raw_notes()</h3>
+                <pre class="signature">get_raw_notes() : string</pre>
+                <p><em>Get the notes column for the customer</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The Notes for the customer, non-parsed</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_sanitize_columns" name="method_sanitize_columns" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">sanitize_columns()</h3>
+                <pre class="signature">sanitize_columns(array  <span class="argument">$data</span>) : array</pre>
+                <p><em>Sanitize the data for update/create</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$data </td>
+                                <td><p>The data to sanitize</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>The sanitized data, based off column defaults</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    </div>
+    </section>
+</div>
+
+</body>
+</html>

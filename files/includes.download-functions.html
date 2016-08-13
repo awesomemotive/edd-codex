@@ -1,0 +1,3030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>Easy Digital Downloads API Documentation</title>
+    <meta name="author" content="Easy Digital Downloads"/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+        <script type="text/javascript">
+        function loadExternalCodeSnippets() {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+                var src = pre.getAttribute('data-src');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist or is empty';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        $(document).ready(function(){
+            loadExternalCodeSnippets();
+        });
+    </script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">
+                <img class="edd-logo" src="https://8333-presscdn-0-98-pagely.netdna-ssl.com/wp-content/themes/edd-v2/images/edd-logo.svg" alt="Easy Digital Downloads" data-fallback="https://8333-presscdn-0-98-pagely.netdna-ssl.com/wp-content/themes/edd-v2/images/edd-logo.png" width="308" height="50">
+            </a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/PayWithAmazon.html">\PayWithAmazon</a></li>
+                                                    </ul>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+        <section class="row-fluid">
+    </section>
+    <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-757538146"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-757538146" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1475053999"></a>
+                                <a href="../namespaces/PayWithAmazon.html" style="margin-left: 30px; padding-left: 0">PayWithAmazon</a>
+            </div>
+            <div id="namespace-1475053999" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.ClientInterface.html">ClientInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.HttpCurlInterface.html">HttpCurlInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.IpnHandlerInterface.html">IpnHandlerInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.ResponseInterface.html">ResponseInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/PayWithAmazon.Client.html">Client</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.EDD_Amazon_Payments.html">EDD_Amazon_Payments</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.HttpCurl.html">HttpCurl</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.IpnHandler.html">IpnHandler</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.ResponseParser.html">ResponseParser</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Easy_Digital_Downloads.html">Easy_Digital_Downloads</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API.html">EDD_API</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_Keys_Table.html">EDD_API_Keys_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_Request_Log_Table.html">EDD_API_Request_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_V1.html">EDD_API_V1</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_V2.html">EDD_API_V2</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Customers_Export.html">EDD_Batch_Customers_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Downloads_Export.html">EDD_Batch_Downloads_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Downloads_Import.html">EDD_Batch_Downloads_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Export.html">EDD_Batch_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_File_Downloads_Export.html">EDD_Batch_File_Downloads_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Import.html">EDD_Batch_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Payments_Export.html">EDD_Batch_Payments_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Payments_Import.html">EDD_Batch_Payments_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Cache_Helper.html">EDD_Cache_Helper</a></li>
+                                                    <li class="class"><a href="../classes/edd_cart_widget.html">edd_cart_widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Categories_Reports_Table.html">EDD_Categories_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/edd_categories_tags_widget.html">edd_categories_tags_widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_CLI.html">EDD_CLI</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Cron.html">EDD_Cron</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customer.html">EDD_Customer</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customer_Reports_Table.html">EDD_Customer_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customers_Export.html">EDD_Customers_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB.html">EDD_DB</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB_Customer_Meta.html">EDD_DB_Customer_Meta</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB_Customers.html">EDD_DB_Customers</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Discount_Codes_Table.html">EDD_Discount_Codes_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download.html">EDD_Download</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download_History_Export.html">EDD_Download_History_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download_Reports_Table.html">EDD_Download_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Earnings_Export.html">EDD_Earnings_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Email_Template_Tags.html">EDD_Email_Template_Tags</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Emails.html">EDD_Emails</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Export.html">EDD_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Fees.html">EDD_Fees</a></li>
+                                                    <li class="class"><a href="../classes/EDD_File_Downloads_Log_Table.html">EDD_File_Downloads_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Gateawy_Reports_Table.html">EDD_Gateawy_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Gateway_Error_Log_Table.html">EDD_Gateway_Error_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Graph.html">EDD_Graph</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Heartbeat.html">EDD_Heartbeat</a></li>
+                                                    <li class="class"><a href="../classes/EDD_HTML_Elements.html">EDD_HTML_Elements</a></li>
+                                                    <li class="class"><a href="../classes/EDD_License.html">EDD_License</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Logging.html">EDD_Logging</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Notices.html">EDD_Notices</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment.html">EDD_Payment</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment_History_Table.html">EDD_Payment_History_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment_Stats.html">EDD_Payment_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payments_Export.html">EDD_Payments_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payments_Query.html">EDD_Payments_Query</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Pie_Graph.html">EDD_Pie_Graph</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Product_Details_Widget.html">EDD_Product_Details_Widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Register_Meta.html">EDD_Register_Meta</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Roles.html">EDD_Roles</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Sales_Log_Table.html">EDD_Sales_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Session.html">EDD_Session</a></li>
+                                                    <li class="class"><a href="../classes/EDD_SL_Plugin_Updater.html">EDD_SL_Plugin_Updater</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Stats.html">EDD_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_All_Stats.html">EDD_Tools_Recount_All_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Customer_Stats.html">EDD_Tools_Recount_Customer_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Download_Stats.html">EDD_Tools_Recount_Download_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Single_Customer_Stats.html">EDD_Tools_Recount_Single_Customer_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Store_Earnings.html">EDD_Tools_Recount_Store_Earnings</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Reset_Stats.html">EDD_Tools_Reset_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tracking.html">EDD_Tracking</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Welcome.html">EDD_Welcome</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content file">
+                    <nav>
+                                                                    </nav>
+
+                    <h1><small>includes</small>download-functions.php</h1>
+                    <p><em>Download Functions</em></p>
+                    
+
+                    
+                    
+                                    </div>
+
+                <aside class="span4 detailsbar">
+                    <dl>
+                                                    <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">\EDD\Functions</div></dd>
+                        
+                        
+                    </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                                    <tr>
+                                <th>
+                                    copyright
+                                </th>
+                                <td>
+                                                                            <p>Copyright (c) 2015, Pippin Williamson</p>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <th>
+                                    license
+                                </th>
+                                <td>
+                                                                            <p><a href="http://opensource.org/licenses/gpl-2.0.php">http://opensource.org/licenses/gpl-2.0.php</a> GNU Public License</p>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <th>
+                                    since
+                                </th>
+                                <td>
+                                                                            
+                                                                    </td>
+                            </tr>
+                                            </table>
+
+                </aside>
+            </div>
+
+            
+                        <div class="row-fluid">
+                <section class="span8 content file">
+                    <h2>Functions</h2>
+                </section>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_download_by" name="method_edd_get_download_by" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_download_by()</h3>
+                <pre class="signature">edd_get_download_by(string  <span class="argument">$field = &#039;&#039;</span>, mixed  <span class="argument">$value = &#039;&#039;</span>) : mixed</pre>
+                <p><em>Retrieve a download by a given field</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$field </td>
+                                <td><p>The field to retrieve the discount with</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$value </td>
+                                <td><p>The value for field</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_download" name="method_edd_get_download" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_download()</h3>
+                <pre class="signature">edd_get_download(integer  <span class="argument">$download</span>) : \WP_Post</pre>
+                <p><em>Retrieves a download post object by ID or slug.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \WP_Post
+                                            &mdash; <p>$download Entire download data</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_is_free_download" name="method_edd_is_free_download" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_is_free_download()</h3>
+                <pre class="signature">edd_is_free_download(integer  <span class="argument">$download_id</span>, integer  <span class="argument">$price_id = false</span>) : boolean</pre>
+                <p><em>Checks whether or not a download is free</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>ID number of the download to check</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$price_id </td>
+                                <td><p>(Optional) ID number of a variably priced item to check</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>$is_free True if the product is free, false if the product is not free or the check fails</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.1                                
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Daniel J Griffiths</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_download_price" name="method_edd_get_download_price" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_download_price()</h3>
+                <pre class="signature">edd_get_download_price(integer  <span class="argument">$download_id</span>) : mixed|string|integer</pre>
+                <p><em>Returns the price of a download, but only for non-variable priced downloads.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>ID number of the download to retrieve a price for</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed|string|integer
+                                            &mdash; <p>Price of the download</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_price" name="method_edd_price" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_price()</h3>
+                <pre class="signature">edd_price(integer  <span class="argument">$download_id</span>, boolean  <span class="argument">$echo = true</span>, integer  <span class="argument">$price_id = false</span>) : void</pre>
+                <p><em>Displays a formatted price for a download</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>ID of the download price to show</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$echo </td>
+                                <td><p>Whether to echo or return the results</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$price_id </td>
+                                <td><p>Optional price id for variable pricing</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_download_final_price" name="method_edd_get_download_final_price" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_download_final_price()</h3>
+                <pre class="signature">edd_get_download_final_price(integer  <span class="argument">$download_id</span>, array  <span class="argument">$user_purchase_info</span>, string  <span class="argument">$amount_override = null</span>) : string</pre>
+                <p><em>Retrieves the final price of a downloadable product after purchase
+this price includes any necessary discounts that were applied</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>ID of the download</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$user_purchase_info </td>
+                                <td><ul>
+<li>an array of all information for the payment</li>
+</ul></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$amount_override </td>
+                                <td><p>a custom amount that over rides the 'edd_price' meta, used for variable prices</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <ul>
+<li>the price of the download</li>
+</ul>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_variable_prices" name="method_edd_get_variable_prices" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_variable_prices()</h3>
+                <pre class="signature">edd_get_variable_prices(integer  <span class="argument">$download_id</span>) : array</pre>
+                <p><em>Retrieves the variable prices for a download</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>ID of the download</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>Variable prices</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_has_variable_prices" name="method_edd_has_variable_prices" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_has_variable_prices()</h3>
+                <pre class="signature">edd_has_variable_prices(integer  <span class="argument">$download_id</span>) : boolean</pre>
+                <p><em>Checks to see if a download has variable prices enabled.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>ID number of the download to check</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>true if has variable prices, false otherwise</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.7                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_default_variable_price" name="method_edd_get_default_variable_price" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_default_variable_price()</h3>
+                <pre class="signature">edd_get_default_variable_price(integer  <span class="argument">$download_id</span>) : integer</pre>
+                <p><em>Returns the default price ID for variable pricing, or the first
+price if none is set</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>ID number of the download to check</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The Price ID to select by default</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_price_option_name" name="method_edd_get_price_option_name" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_price_option_name()</h3>
+                <pre class="signature">edd_get_price_option_name(integer  <span class="argument">$download_id</span>, integer  <span class="argument">$price_id</span>, integer  <span class="argument">$payment_id</span>) : string</pre>
+                <p><em>Retrieves the name of a variable price option</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>ID of the download</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$price_id </td>
+                                <td><p>ID of the price option</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$payment_id </td>
+                                <td><p>optional payment ID for use in filters</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>$price_name Name of the price option</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.9                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_price_option_amount" name="method_edd_get_price_option_amount" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_price_option_amount()</h3>
+                <pre class="signature">edd_get_price_option_amount(integer  <span class="argument">$download_id</span>, integer  <span class="argument">$price_id</span>) : float</pre>
+                <p><em>Retrieves the amount of a variable price option</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>ID of the download</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$price_id </td>
+                                <td><p>ID of the price option</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>$amount Amount of the price option</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.8.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_lowest_price_option" name="method_edd_get_lowest_price_option" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_lowest_price_option()</h3>
+                <pre class="signature">edd_get_lowest_price_option(integer  <span class="argument">$download_id</span>) : float</pre>
+                <p><em>Retrieves cheapest price option of a variable priced download</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>ID of the download</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>Amount of the lowest price</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.4.4                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_lowest_price_id" name="method_edd_get_lowest_price_id" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_lowest_price_id()</h3>
+                <pre class="signature">edd_get_lowest_price_id(integer  <span class="argument">$download_id</span>) : integer</pre>
+                <p><em>Retrieves the ID for the cheapest price option of a variable priced download</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>ID of the download</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>ID of the lowest price</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_highest_price_option" name="method_edd_get_highest_price_option" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_highest_price_option()</h3>
+                <pre class="signature">edd_get_highest_price_option(integer  <span class="argument">$download_id</span>) : float</pre>
+                <p><em>Retrieves most expensive price option of a variable priced download</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>ID of the download</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>Amount of the highest price</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.4.4                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_price_range" name="method_edd_price_range" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_price_range()</h3>
+                <pre class="signature">edd_price_range(integer  <span class="argument">$download_id</span>) : string</pre>
+                <p><em>Retrieves a price from from low to high of a variable priced download</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>ID of the download</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>$range A fully formatted price range</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.4.4                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_single_price_option_mode" name="method_edd_single_price_option_mode" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_single_price_option_mode()</h3>
+                <pre class="signature">edd_single_price_option_mode(integer  <span class="argument">$download_id</span>) : boolean</pre>
+                <p><em>Checks to see if multiple price options can be purchased at once</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.4.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_download_types" name="method_edd_get_download_types" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_download_types()</h3>
+                <pre class="signature">edd_get_download_types() : array</pre>
+                <p><em>Get product types</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>$types Download types</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.8                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_download_type" name="method_edd_get_download_type" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_download_type()</h3>
+                <pre class="signature">edd_get_download_type(integer  <span class="argument">$download_id</span>) : string</pre>
+                <p><em>Gets the Download type, either default or &quot;bundled&quot;</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>$type Download type</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_is_bundled_product" name="method_edd_is_bundled_product" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_is_bundled_product()</h3>
+                <pre class="signature">edd_is_bundled_product(integer  <span class="argument">$download_id</span>) : boolean</pre>
+                <p><em>Determines if a product is a bundle</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_bundled_products" name="method_edd_get_bundled_products" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_bundled_products()</h3>
+                <pre class="signature">edd_get_bundled_products(integer  <span class="argument">$download_id</span>) : array</pre>
+                <p><em>Retrieves the product IDs of bundled products</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>$products Products in the bundle</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_download_earnings_stats" name="method_edd_get_download_earnings_stats" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_download_earnings_stats()</h3>
+                <pre class="signature">edd_get_download_earnings_stats(integer  <span class="argument">$download_id</span>) : integer</pre>
+                <p><em>Returns the total earnings for a download.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>$earnings Earnings for a certain download</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_download_sales_stats" name="method_edd_get_download_sales_stats" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_download_sales_stats()</h3>
+                <pre class="signature">edd_get_download_sales_stats(integer  <span class="argument">$download_id</span>) : integer</pre>
+                <p><em>Return the sales number for a download.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>$sales Amount of sales for a certain download</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_record_sale_in_log" name="method_edd_record_sale_in_log" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_record_sale_in_log()</h3>
+                <pre class="signature">edd_record_sale_in_log(integer  <span class="argument">$download_id</span>, integer  <span class="argument">$payment_id</span>, boolean|integer  <span class="argument">$price_id = false</span>, string|null  <span class="argument">$sale_date = null</span>) : void</pre>
+                <p><em>Record Sale In Log</em></p>
+                <p>Stores log information for a download sale.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$payment_id </td>
+                                <td><p>Payment ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean|integer</td>
+                                <td>$price_id </td>
+                                <td><p>Price ID, if any</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string|null</td>
+                                <td>$sale_date </td>
+                                <td><p>The date of the sale</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            global
+                        </th>
+                        <td>
+                                                                                            <p>$edd_logs</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_record_download_in_log" name="method_edd_record_download_in_log" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_record_download_in_log()</h3>
+                <pre class="signature">edd_record_download_in_log(integer  <span class="argument">$download_id</span>, integer  <span class="argument">$file_id</span>, array  <span class="argument">$user_info</span>, string  <span class="argument">$ip</span>, integer  <span class="argument">$payment_id</span>, integer  <span class="argument">$price_id = false</span>) : void</pre>
+                <p><em>Record Download In Log</em></p>
+                <p>Stores a log entry for a file download.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$file_id </td>
+                                <td><p>ID of the file downloaded</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$user_info </td>
+                                <td><p>User information</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$ip </td>
+                                <td><p>IP Address</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$payment_id </td>
+                                <td><p>Payment ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$price_id </td>
+                                <td><p>Price ID, if any</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            global
+                        </th>
+                        <td>
+                                                                                            <p>$edd_logs</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_remove_download_logs_on_delete" name="method_edd_remove_download_logs_on_delete" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_remove_download_logs_on_delete()</h3>
+                <pre class="signature">edd_remove_download_logs_on_delete(integer  <span class="argument">$download_id</span>) : void</pre>
+                <p><em>Delete log entries when deleting download product</em></p>
+                <p>Removes all related log entries when a download is completely deleted.
+(Does not run when a download is trashed)</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.3.4                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_increase_purchase_count" name="method_edd_increase_purchase_count" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_increase_purchase_count()</h3>
+                <pre class="signature">edd_increase_purchase_count(integer  <span class="argument">$download_id</span>, integer  <span class="argument">$quantity = 1</span>) : boolean|integer</pre>
+                <p><em>Increases the sale count of a download.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$quantity </td>
+                                <td><p>Quantity to increase purchase count by</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean|integer
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_decrease_purchase_count" name="method_edd_decrease_purchase_count" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_decrease_purchase_count()</h3>
+                <pre class="signature">edd_decrease_purchase_count(integer  <span class="argument">$download_id</span>,   <span class="argument">$quantity = 1</span>) : boolean|integer</pre>
+                <p><em>Decreases the sale count of a download. Primarily for when a purchase is
+refunded.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$quantity </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean|integer
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.8.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_increase_earnings" name="method_edd_increase_earnings" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_increase_earnings()</h3>
+                <pre class="signature">edd_increase_earnings(integer  <span class="argument">$download_id</span>, integer  <span class="argument">$amount</span>) : boolean|integer</pre>
+                <p><em>Increases the total earnings of a download.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$amount </td>
+                                <td><p>Earnings</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean|integer
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_decrease_earnings" name="method_edd_decrease_earnings" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_decrease_earnings()</h3>
+                <pre class="signature">edd_decrease_earnings(integer  <span class="argument">$download_id</span>, integer  <span class="argument">$amount</span>) : boolean|integer</pre>
+                <p><em>Decreases the total earnings of a download. Primarily for when a purchase is refunded.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$amount </td>
+                                <td><p>Earnings</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean|integer
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.8.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_average_monthly_download_earnings" name="method_edd_get_average_monthly_download_earnings" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_average_monthly_download_earnings()</h3>
+                <pre class="signature">edd_get_average_monthly_download_earnings(integer  <span class="argument">$download_id</span>) : float</pre>
+                <p><em>Retrieves the average monthly earnings for a specific download</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>$earnings Average monthly earnings</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_average_monthly_download_sales" name="method_edd_get_average_monthly_download_sales" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_average_monthly_download_sales()</h3>
+                <pre class="signature">edd_get_average_monthly_download_sales(integer  <span class="argument">$download_id</span>) : float</pre>
+                <p><em>Retrieves the average monthly sales for a specific download</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>$sales Average monthly sales</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_download_files" name="method_edd_get_download_files" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_download_files()</h3>
+                <pre class="signature">edd_get_download_files(integer  <span class="argument">$download_id</span>, integer  <span class="argument">$variable_price_id = null</span>) : array</pre>
+                <p><em>Gets all download files for a product</em></p>
+                <p>Can retrieve files specific to price ID</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$variable_price_id </td>
+                                <td><p>Variable pricing option ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>$files Download files</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_file_name" name="method_edd_get_file_name" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_file_name()</h3>
+                <pre class="signature">edd_get_file_name(array  <span class="argument">$file = array()</span>) : string</pre>
+                <p><em>Retrieves a file name for a product&#039;s download file</em></p>
+                <p>Defaults to the file's actual name if no 'name' key is present</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$file </td>
+                                <td><p>File array</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The file name</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_file_downloaded_count" name="method_edd_get_file_downloaded_count" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_file_downloaded_count()</h3>
+                <pre class="signature">edd_get_file_downloaded_count(integer  <span class="argument">$download_id</span>, integer  <span class="argument">$file_key</span>, integer  <span class="argument">$payment_id</span>) : integer</pre>
+                <p><em>Gets the number of times a file has been downloaded for a specific purchase</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$file_key </td>
+                                <td><p>File key</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$payment_id </td>
+                                <td><p>The ID number of the associated payment</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>Number of times the file has been downloaded for the purchase</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_file_download_limit" name="method_edd_get_file_download_limit" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_file_download_limit()</h3>
+                <pre class="signature">edd_get_file_download_limit(integer  <span class="argument">$download_id</span>) : integer</pre>
+                <p><em>Gets the file download file limit for a particular download</em></p>
+                <p>This limit refers to the maximum number of times files connected to a product
+can be downloaded.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>$limit File download limit</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.3.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_file_download_limit_override" name="method_edd_get_file_download_limit_override" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_file_download_limit_override()</h3>
+                <pre class="signature">edd_get_file_download_limit_override(integer  <span class="argument">$download_id</span>, integer  <span class="argument">$payment_id</span>) : integer</pre>
+                <p><em>Gets the file download file limit override for a particular download</em></p>
+                <p>The override allows the main file download limit to be bypassed</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$payment_id </td>
+                                <td><p>Payment ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>$limit_override The new limit</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.3.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_set_file_download_limit_override" name="method_edd_set_file_download_limit_override" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_set_file_download_limit_override()</h3>
+                <pre class="signature">edd_set_file_download_limit_override(integer  <span class="argument">$download_id</span>, integer  <span class="argument">$payment_id</span>) : void</pre>
+                <p><em>Sets the file download file limit override for a particular download</em></p>
+                <p>The override allows the main file download limit to be bypassed
+If no override is set yet, the override is set to the main limit + 1
+If the override is already set, then it is simply incremented by 1</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$payment_id </td>
+                                <td><p>Payment ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.3.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_is_file_at_download_limit" name="method_edd_is_file_at_download_limit" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_is_file_at_download_limit()</h3>
+                <pre class="signature">edd_is_file_at_download_limit(integer  <span class="argument">$download_id</span>, integer  <span class="argument">$payment_id</span>, integer  <span class="argument">$file_id</span>, integer  <span class="argument">$price_id = false</span>) : boolean</pre>
+                <p><em>Checks if a file is at its download limit</em></p>
+                <p>This limit refers to the maximum number of times files connected to a product
+can be downloaded.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$payment_id </td>
+                                <td><p>Payment ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$file_id </td>
+                                <td><p>File ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$price_id </td>
+                                <td><p>Price ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>True if at limit, false otherwise</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                                                            <dt>Uses</dt>
+                                                                <dd>EDD_Logging::get_log_count()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.3.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_file_price_condition" name="method_edd_get_file_price_condition" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_file_price_condition()</h3>
+                <pre class="signature">edd_get_file_price_condition(integer  <span class="argument">$download_id</span>, string  <span class="argument">$file_key</span>) : string</pre>
+                <p><em>Gets the Price ID that can download a file</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$file_key </td>
+                                <td><p>File Key</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <ul>
+<li>the price ID if restricted, &quot;all&quot; otherwise</li>
+</ul>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.9                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_download_file_url" name="method_edd_get_download_file_url" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_download_file_url()</h3>
+                <pre class="signature">edd_get_download_file_url(string  <span class="argument">$key</span>, string  <span class="argument">$email</span>, integer  <span class="argument">$filekey</span>, integer  <span class="argument">$download_id</span>, boolean|integer  <span class="argument">$price_id = false</span>) : string</pre>
+                <p><em>Get Download File Url
+Constructs a secure file download url for a specific file.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$key </td>
+                                <td><p>Payment key. Use edd_get_payment_key() to get key.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$email </td>
+                                <td><p>Customer email address. Use edd_get_payment_user_email() to get user email.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$filekey </td>
+                                <td><p>Index of array of files returned by edd_get_download_files() that this download link is for.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Optional. ID of download this download link is for. Default is 0.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean|integer</td>
+                                <td>$price_id </td>
+                                <td><p>Optional. Price ID when using variable prices. Default is false.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>A secure download URL</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_product_notes" name="method_edd_get_product_notes" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_product_notes()</h3>
+                <pre class="signature">edd_get_product_notes(integer  <span class="argument">$download_id</span>) : string</pre>
+                <p><em>Get product notes</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>$notes Product notes</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.2.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_download_sku" name="method_edd_get_download_sku" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_download_sku()</h3>
+                <pre class="signature">edd_get_download_sku(integer  <span class="argument">$download_id</span>) : mixed|void</pre>
+                <p><em>Retrieves a download SKU by ID.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed|void
+                                            &mdash; <p>Download SKU</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.6                                
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Daniel J Griffiths</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_download_button_behavior" name="method_edd_get_download_button_behavior" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_download_button_behavior()</h3>
+                <pre class="signature">edd_get_download_button_behavior(integer  <span class="argument">$download_id</span>) : mixed|void</pre>
+                <p><em>get the Download button behavior, either add to cart or direct</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed|void
+                                            &mdash; <p>Add to Cart or Direct</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.7                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_file_download_method" name="method_edd_get_file_download_method" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_file_download_method()</h3>
+                <pre class="signature">edd_get_file_download_method() : string</pre>
+                <p><em>Get the file Download method</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The method to use for file downloads</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_random_download" name="method_edd_get_random_download" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_random_download()</h3>
+                <pre class="signature">edd_get_random_download(boolean  <span class="argument">$post_ids = true</span>) </pre>
+                <p><em>Returns a random download</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$post_ids </td>
+                                <td><p>True for array of post ids, false if array of posts</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.7                                
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Chris Christoff</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_random_downloads" name="method_edd_get_random_downloads" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_random_downloads()</h3>
+                <pre class="signature">edd_get_random_downloads(integer  <span class="argument">$num = 3</span>, boolean  <span class="argument">$post_ids = true</span>) : mixed</pre>
+                <p><em>Returns random downloads</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$num </td>
+                                <td><p>The number of posts to return</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$post_ids </td>
+                                <td><p>True for array of post objects, else array of ids</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                            &mdash; <p>$query Returns an array of id's or an array of post objects</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.7                                
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Chris Christoff</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_download_token" name="method_edd_get_download_token" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_download_token()</h3>
+                <pre class="signature">edd_get_download_token(string  <span class="argument">$url = &#039;&#039;</span>) : string</pre>
+                <p><em>Generates a token for a given URL.</em></p>
+                <p>An 'o' query parameter on a URL can include optional variables to test
+against when verifying a token without passing those variables around in
+the URL. For example, downloads can be limited to the IP that the URL was
+generated for by adding 'o=ip' to the query string.</p>
+<p>Or suppose when WordPress requested a URL for automatic updates, the user
+agent could be tested to ensure the URL is only valid for requests from
+that user agent.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$url </td>
+                                <td><p>The URL to generate a token for.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The token for the URL.</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_validate_url_token" name="method_edd_validate_url_token" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_validate_url_token()</h3>
+                <pre class="signature">edd_validate_url_token(string  <span class="argument">$url = &#039;&#039;</span>) : boolean</pre>
+                <p><em>Generate a token for a URL and match it against the existing token to make
+sure the URL hasn&#039;t been tampered with.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$url </td>
+                                <td><p>URL to test.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/download-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+        </div>
+    </section>
+</div>
+
+</body>
+</html>

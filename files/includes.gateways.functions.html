@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>Easy Digital Downloads API Documentation</title>
+    <meta name="author" content="Easy Digital Downloads"/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+        <script type="text/javascript">
+        function loadExternalCodeSnippets() {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+                var src = pre.getAttribute('data-src');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist or is empty';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        $(document).ready(function(){
+            loadExternalCodeSnippets();
+        });
+    </script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">
+                <img class="edd-logo" src="https://8333-presscdn-0-98-pagely.netdna-ssl.com/wp-content/themes/edd-v2/images/edd-logo.svg" alt="Easy Digital Downloads" data-fallback="https://8333-presscdn-0-98-pagely.netdna-ssl.com/wp-content/themes/edd-v2/images/edd-logo.png" width="308" height="50">
+            </a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/PayWithAmazon.html">\PayWithAmazon</a></li>
+                                                    </ul>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+        <section class="row-fluid">
+    </section>
+    <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1547740828"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1547740828" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-171402504"></a>
+                                <a href="../namespaces/PayWithAmazon.html" style="margin-left: 30px; padding-left: 0">PayWithAmazon</a>
+            </div>
+            <div id="namespace-171402504" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.ClientInterface.html">ClientInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.HttpCurlInterface.html">HttpCurlInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.IpnHandlerInterface.html">IpnHandlerInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.ResponseInterface.html">ResponseInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/PayWithAmazon.Client.html">Client</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.EDD_Amazon_Payments.html">EDD_Amazon_Payments</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.HttpCurl.html">HttpCurl</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.IpnHandler.html">IpnHandler</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.ResponseParser.html">ResponseParser</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Easy_Digital_Downloads.html">Easy_Digital_Downloads</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API.html">EDD_API</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_Keys_Table.html">EDD_API_Keys_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_Request_Log_Table.html">EDD_API_Request_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_V1.html">EDD_API_V1</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_V2.html">EDD_API_V2</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Customers_Export.html">EDD_Batch_Customers_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Downloads_Export.html">EDD_Batch_Downloads_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Downloads_Import.html">EDD_Batch_Downloads_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Export.html">EDD_Batch_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_File_Downloads_Export.html">EDD_Batch_File_Downloads_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Import.html">EDD_Batch_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Payments_Export.html">EDD_Batch_Payments_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Payments_Import.html">EDD_Batch_Payments_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Cache_Helper.html">EDD_Cache_Helper</a></li>
+                                                    <li class="class"><a href="../classes/edd_cart_widget.html">edd_cart_widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Categories_Reports_Table.html">EDD_Categories_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/edd_categories_tags_widget.html">edd_categories_tags_widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_CLI.html">EDD_CLI</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Cron.html">EDD_Cron</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customer.html">EDD_Customer</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customer_Reports_Table.html">EDD_Customer_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customers_Export.html">EDD_Customers_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB.html">EDD_DB</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB_Customer_Meta.html">EDD_DB_Customer_Meta</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB_Customers.html">EDD_DB_Customers</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Discount_Codes_Table.html">EDD_Discount_Codes_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download.html">EDD_Download</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download_History_Export.html">EDD_Download_History_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download_Reports_Table.html">EDD_Download_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Earnings_Export.html">EDD_Earnings_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Email_Template_Tags.html">EDD_Email_Template_Tags</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Emails.html">EDD_Emails</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Export.html">EDD_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Fees.html">EDD_Fees</a></li>
+                                                    <li class="class"><a href="../classes/EDD_File_Downloads_Log_Table.html">EDD_File_Downloads_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Gateawy_Reports_Table.html">EDD_Gateawy_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Gateway_Error_Log_Table.html">EDD_Gateway_Error_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Graph.html">EDD_Graph</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Heartbeat.html">EDD_Heartbeat</a></li>
+                                                    <li class="class"><a href="../classes/EDD_HTML_Elements.html">EDD_HTML_Elements</a></li>
+                                                    <li class="class"><a href="../classes/EDD_License.html">EDD_License</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Logging.html">EDD_Logging</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Notices.html">EDD_Notices</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment.html">EDD_Payment</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment_History_Table.html">EDD_Payment_History_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment_Stats.html">EDD_Payment_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payments_Export.html">EDD_Payments_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payments_Query.html">EDD_Payments_Query</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Pie_Graph.html">EDD_Pie_Graph</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Product_Details_Widget.html">EDD_Product_Details_Widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Register_Meta.html">EDD_Register_Meta</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Roles.html">EDD_Roles</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Sales_Log_Table.html">EDD_Sales_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Session.html">EDD_Session</a></li>
+                                                    <li class="class"><a href="../classes/EDD_SL_Plugin_Updater.html">EDD_SL_Plugin_Updater</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Stats.html">EDD_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_All_Stats.html">EDD_Tools_Recount_All_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Customer_Stats.html">EDD_Tools_Recount_Customer_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Download_Stats.html">EDD_Tools_Recount_Download_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Single_Customer_Stats.html">EDD_Tools_Recount_Single_Customer_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Store_Earnings.html">EDD_Tools_Recount_Store_Earnings</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Reset_Stats.html">EDD_Tools_Reset_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tracking.html">EDD_Tracking</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Welcome.html">EDD_Welcome</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content file">
+                    <nav>
+                                                                    </nav>
+
+                    <h1><small>includes/gateways</small>functions.php</h1>
+                    <p><em>Gateway Functions</em></p>
+                    
+
+                    
+                    
+                                    </div>
+
+                <aside class="span4 detailsbar">
+                    <dl>
+                                                    <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">\EDD\Gateways</div></dd>
+                        
+                        
+                    </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                                    <tr>
+                                <th>
+                                    copyright
+                                </th>
+                                <td>
+                                                                            <p>Copyright (c) 2015, Pippin Williamson</p>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <th>
+                                    license
+                                </th>
+                                <td>
+                                                                            <p><a href="http://opensource.org/licenses/gpl-2.0.php">http://opensource.org/licenses/gpl-2.0.php</a> GNU Public License</p>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <th>
+                                    since
+                                </th>
+                                <td>
+                                                                            
+                                                                    </td>
+                            </tr>
+                                            </table>
+
+                </aside>
+            </div>
+
+            
+                        <div class="row-fluid">
+                <section class="span8 content file">
+                    <h2>Functions</h2>
+                </section>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_payment_gateways" name="method_edd_get_payment_gateways" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_payment_gateways()</h3>
+                <pre class="signature">edd_get_payment_gateways() : array</pre>
+                <p><em>Returns a list of all available gateways.</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>$gateways All the available gateways</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_enabled_payment_gateways" name="method_edd_get_enabled_payment_gateways" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_enabled_payment_gateways()</h3>
+                <pre class="signature">edd_get_enabled_payment_gateways(boolean  <span class="argument">$sort = false</span>) : array</pre>
+                <p><em>Returns a list of all enabled gateways.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$sort </td>
+                                <td><p>If true, the default gateway will be first</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>$gateway_list All the available gateways</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_is_gateway_active" name="method_edd_is_gateway_active" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_is_gateway_active()</h3>
+                <pre class="signature">edd_is_gateway_active(string  <span class="argument">$gateway</span>) : boolean</pre>
+                <p><em>Checks whether a specified gateway is activated.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$gateway </td>
+                                <td><p>Name of the gateway to check for</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>true if enabled, false otherwise</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_default_gateway" name="method_edd_get_default_gateway" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_default_gateway()</h3>
+                <pre class="signature">edd_get_default_gateway() : string</pre>
+                <p><em>Gets the default payment gateway selected from the EDD Settings</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Gateway ID</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_gateway_admin_label" name="method_edd_get_gateway_admin_label" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_gateway_admin_label()</h3>
+                <pre class="signature">edd_get_gateway_admin_label(string  <span class="argument">$gateway</span>) : string</pre>
+                <p><em>Returns the admin label for the specified gateway</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$gateway </td>
+                                <td><p>Name of the gateway to retrieve a label for</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Gateway admin label</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.8.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_gateway_checkout_label" name="method_edd_get_gateway_checkout_label" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_gateway_checkout_label()</h3>
+                <pre class="signature">edd_get_gateway_checkout_label(string  <span class="argument">$gateway</span>) : string</pre>
+                <p><em>Returns the checkout label for the specified gateway</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$gateway </td>
+                                <td><p>Name of the gateway to retrieve a label for</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Checkout label for the gateway</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.8.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_gateway_supports" name="method_edd_get_gateway_supports" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_gateway_supports()</h3>
+                <pre class="signature">edd_get_gateway_supports(string  <span class="argument">$gateway</span>) : array</pre>
+                <p><em>Returns the options a gateway supports</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$gateway </td>
+                                <td><p>ID of the gateway to retrieve a label for</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>Options the gateway supports</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.8                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_gateway_supports_buy_now" name="method_edd_gateway_supports_buy_now" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_gateway_supports_buy_now()</h3>
+                <pre class="signature">edd_gateway_supports_buy_now(string  <span class="argument">$gateway</span>) : boolean</pre>
+                <p><em>Checks if a gateway supports buy now</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$gateway </td>
+                                <td><p>ID of the gateway to retrieve a label for</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.8                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_shop_supports_buy_now" name="method_edd_shop_supports_buy_now" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_shop_supports_buy_now()</h3>
+                <pre class="signature">edd_shop_supports_buy_now() : boolean</pre>
+                <p><em>Checks if an enabled gateway supports buy now</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.8                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_build_straight_to_gateway_data" name="method_edd_build_straight_to_gateway_data" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_build_straight_to_gateway_data()</h3>
+                <pre class="signature">edd_build_straight_to_gateway_data(integer  <span class="argument">$download_id</span>, array  <span class="argument">$options = array()</span>, integer  <span class="argument">$quantity = 1</span>) : mixed|void</pre>
+                <p><em>Build the purchase data for a straight-to-gateway purchase button</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$options </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$quantity </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed|void
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.7                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_send_to_gateway" name="method_edd_send_to_gateway" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_send_to_gateway()</h3>
+                <pre class="signature">edd_send_to_gateway(string  <span class="argument">$gateway</span>, array  <span class="argument">$payment_data</span>) : void</pre>
+                <p><em>Sends all the payment data to the specified gateway</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$gateway </td>
+                                <td><p>Name of the gateway</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$payment_data </td>
+                                <td><p>All the payment data to be sent to the gateway</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_show_gateways" name="method_edd_show_gateways" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_show_gateways()</h3>
+                <pre class="signature">edd_show_gateways() : boolean</pre>
+                <p><em>Determines if the gateway menu should be shown</em></p>
+                <p>If the cart amount is zero, no option is shown and the cart uses the manual gateway
+to emulate a no-gateway-setup for a free download</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>$show_gateways Whether or not to show the gateways</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.3.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_chosen_gateway" name="method_edd_get_chosen_gateway" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_chosen_gateway()</h3>
+                <pre class="signature">edd_get_chosen_gateway() : string</pre>
+                <p><em>Determines what the currently selected gateway is</em></p>
+                <p>If the cart amount is zero, no option is shown and the cart uses the manual
+gateway to emulate a no-gateway-setup for a free download</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>$enabled_gateway The slug of the gateway</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.3.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_record_gateway_error" name="method_edd_record_gateway_error" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_record_gateway_error()</h3>
+                <pre class="signature">edd_record_gateway_error(string  <span class="argument">$title = &#039;&#039;</span>, string  <span class="argument">$message = &#039;&#039;</span>, integer  <span class="argument">$parent</span>) : integer</pre>
+                <p><em>Record a gateway error</em></p>
+                <p>A simple wrapper function for edd_record_log()</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$title </td>
+                                <td><p>Title of the log entry (default: empty)</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$message </td>
+                                <td><p>Message to store in the log entry (default: empty)</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$parent </td>
+                                <td><p>Parent log entry (default: 0)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>ID of the new log entry</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.3.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_count_sales_by_gateway" name="method_edd_count_sales_by_gateway" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_count_sales_by_gateway()</h3>
+                <pre class="signature">edd_count_sales_by_gateway(string  <span class="argument">$gateway_id = &#039;paypal&#039;</span>, string  <span class="argument">$status = &#039;publish&#039;</span>) : integer</pre>
+                <p><em>Counts the number of purchases made with a gateway</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$gateway_id </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$status </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/gateways/functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+        </div>
+    </section>
+</div>
+
+</body>
+</html>

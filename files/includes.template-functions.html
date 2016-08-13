@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>Easy Digital Downloads API Documentation</title>
+    <meta name="author" content="Easy Digital Downloads"/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+        <script type="text/javascript">
+        function loadExternalCodeSnippets() {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+                var src = pre.getAttribute('data-src');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist or is empty';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        $(document).ready(function(){
+            loadExternalCodeSnippets();
+        });
+    </script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">
+                <img class="edd-logo" src="https://8333-presscdn-0-98-pagely.netdna-ssl.com/wp-content/themes/edd-v2/images/edd-logo.svg" alt="Easy Digital Downloads" data-fallback="https://8333-presscdn-0-98-pagely.netdna-ssl.com/wp-content/themes/edd-v2/images/edd-logo.png" width="308" height="50">
+            </a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/PayWithAmazon.html">\PayWithAmazon</a></li>
+                                                    </ul>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+        <section class="row-fluid">
+    </section>
+    <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-715595604"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-715595604" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-749218507"></a>
+                                <a href="../namespaces/PayWithAmazon.html" style="margin-left: 30px; padding-left: 0">PayWithAmazon</a>
+            </div>
+            <div id="namespace-749218507" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.ClientInterface.html">ClientInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.HttpCurlInterface.html">HttpCurlInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.IpnHandlerInterface.html">IpnHandlerInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.ResponseInterface.html">ResponseInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/PayWithAmazon.Client.html">Client</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.EDD_Amazon_Payments.html">EDD_Amazon_Payments</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.HttpCurl.html">HttpCurl</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.IpnHandler.html">IpnHandler</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.ResponseParser.html">ResponseParser</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Easy_Digital_Downloads.html">Easy_Digital_Downloads</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API.html">EDD_API</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_Keys_Table.html">EDD_API_Keys_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_Request_Log_Table.html">EDD_API_Request_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_V1.html">EDD_API_V1</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_V2.html">EDD_API_V2</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Customers_Export.html">EDD_Batch_Customers_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Downloads_Export.html">EDD_Batch_Downloads_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Downloads_Import.html">EDD_Batch_Downloads_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Export.html">EDD_Batch_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_File_Downloads_Export.html">EDD_Batch_File_Downloads_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Import.html">EDD_Batch_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Payments_Export.html">EDD_Batch_Payments_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Payments_Import.html">EDD_Batch_Payments_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Cache_Helper.html">EDD_Cache_Helper</a></li>
+                                                    <li class="class"><a href="../classes/edd_cart_widget.html">edd_cart_widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Categories_Reports_Table.html">EDD_Categories_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/edd_categories_tags_widget.html">edd_categories_tags_widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_CLI.html">EDD_CLI</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Cron.html">EDD_Cron</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customer.html">EDD_Customer</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customer_Reports_Table.html">EDD_Customer_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customers_Export.html">EDD_Customers_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB.html">EDD_DB</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB_Customer_Meta.html">EDD_DB_Customer_Meta</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB_Customers.html">EDD_DB_Customers</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Discount_Codes_Table.html">EDD_Discount_Codes_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download.html">EDD_Download</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download_History_Export.html">EDD_Download_History_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download_Reports_Table.html">EDD_Download_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Earnings_Export.html">EDD_Earnings_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Email_Template_Tags.html">EDD_Email_Template_Tags</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Emails.html">EDD_Emails</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Export.html">EDD_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Fees.html">EDD_Fees</a></li>
+                                                    <li class="class"><a href="../classes/EDD_File_Downloads_Log_Table.html">EDD_File_Downloads_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Gateawy_Reports_Table.html">EDD_Gateawy_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Gateway_Error_Log_Table.html">EDD_Gateway_Error_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Graph.html">EDD_Graph</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Heartbeat.html">EDD_Heartbeat</a></li>
+                                                    <li class="class"><a href="../classes/EDD_HTML_Elements.html">EDD_HTML_Elements</a></li>
+                                                    <li class="class"><a href="../classes/EDD_License.html">EDD_License</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Logging.html">EDD_Logging</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Notices.html">EDD_Notices</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment.html">EDD_Payment</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment_History_Table.html">EDD_Payment_History_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment_Stats.html">EDD_Payment_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payments_Export.html">EDD_Payments_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payments_Query.html">EDD_Payments_Query</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Pie_Graph.html">EDD_Pie_Graph</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Product_Details_Widget.html">EDD_Product_Details_Widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Register_Meta.html">EDD_Register_Meta</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Roles.html">EDD_Roles</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Sales_Log_Table.html">EDD_Sales_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Session.html">EDD_Session</a></li>
+                                                    <li class="class"><a href="../classes/EDD_SL_Plugin_Updater.html">EDD_SL_Plugin_Updater</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Stats.html">EDD_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_All_Stats.html">EDD_Tools_Recount_All_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Customer_Stats.html">EDD_Tools_Recount_Customer_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Download_Stats.html">EDD_Tools_Recount_Download_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Single_Customer_Stats.html">EDD_Tools_Recount_Single_Customer_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Store_Earnings.html">EDD_Tools_Recount_Store_Earnings</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Reset_Stats.html">EDD_Tools_Reset_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tracking.html">EDD_Tracking</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Welcome.html">EDD_Welcome</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content file">
+                    <nav>
+                                                                    </nav>
+
+                    <h1><small>includes</small>template-functions.php</h1>
+                    <p><em>Template Functions</em></p>
+                    
+
+                    
+                    
+                                    </div>
+
+                <aside class="span4 detailsbar">
+                    <dl>
+                                                    <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">\EDD\Functions/Templates</div></dd>
+                        
+                        
+                    </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                                    <tr>
+                                <th>
+                                    copyright
+                                </th>
+                                <td>
+                                                                            <p>Copyright (c) 2015, Pippin Williamson</p>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <th>
+                                    license
+                                </th>
+                                <td>
+                                                                            <p><a href="http://opensource.org/licenses/gpl-2.0.php">http://opensource.org/licenses/gpl-2.0.php</a> GNU Public License</p>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <th>
+                                    since
+                                </th>
+                                <td>
+                                                                            
+                                                                    </td>
+                            </tr>
+                                            </table>
+
+                </aside>
+            </div>
+
+            
+                        <div class="row-fluid">
+                <section class="span8 content file">
+                    <h2>Functions</h2>
+                </section>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_append_purchase_link" name="method_edd_append_purchase_link" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_append_purchase_link()</h3>
+                <pre class="signature">edd_append_purchase_link(integer  <span class="argument">$download_id</span>) : void</pre>
+                <p><em>Append Purchase Link</em></p>
+                <p>Automatically appends the purchase link to download content, if enabled.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_purchase_link" name="method_edd_get_purchase_link" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_purchase_link()</h3>
+                <pre class="signature">edd_get_purchase_link(array  <span class="argument">$args = array()</span>) : string</pre>
+                <p><em>Get Purchase Link</em></p>
+                <p>Builds a Purchase link for a specified download based on arguments passed.
+This function is used all over EDD to generate the Purchase or Add to Cart
+buttons. If no arguments are passed, the function uses the defaults that have
+been set by the plugin. The Purchase link is built for simple and variable
+pricing and filters are available throughout the function to override
+certain elements of the function.</p>
+<p>$download_id = null, $link_text = null, $style = null, $color = null, $class = null</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$args </td>
+                                <td><p>Arguments for display</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>$purchase_form</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_purchase_variable_pricing" name="method_edd_purchase_variable_pricing" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_purchase_variable_pricing()</h3>
+                <pre class="signature">edd_purchase_variable_pricing(integer  <span class="argument">$download_id</span>,   <span class="argument">$args = array()</span>) : void</pre>
+                <p><em>Variable price output</em></p>
+                <p>Outputs variable pricing options for each download or a specified downloads in a list.
+The output generated can be overridden by the filters provided or by removing
+the action and adding your own custom action.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$args </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.2.3                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_download_purchase_form_quantity_field" name="method_edd_download_purchase_form_quantity_field" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_download_purchase_form_quantity_field()</h3>
+                <pre class="signature">edd_download_purchase_form_quantity_field(integer  <span class="argument">$download_id</span>, array  <span class="argument">$args = array()</span>) : void</pre>
+                <p><em>Display the quantity field for a variable price when multi-purchase mode is enabled</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$args </td>
+                                <td><p>Argument array</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_variable_price_quantity_field" name="method_edd_variable_price_quantity_field" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_variable_price_quantity_field()</h3>
+                <pre class="signature">edd_variable_price_quantity_field(integer  <span class="argument">$key</span>, array  <span class="argument">$price</span>, integer  <span class="argument">$download_id</span>) : void</pre>
+                <p><em>Display the quantity field for a variable price when multi-purchase mode is enabled</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$key </td>
+                                <td><p>Price ID</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$price </td>
+                                <td><p>price option array</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>Download ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_before_download_content" name="method_edd_before_download_content" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_before_download_content()</h3>
+                <pre class="signature">edd_before_download_content(  <span class="argument">$content</span>) : string</pre>
+                <p><em>Before Download Content</em></p>
+                <p>Adds an action to the beginning of download post content that can be hooked to
+by other functions.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$content </td>
+                                <td><p>The the_content field of the download object</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>the content with any additional data attached</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.8                                
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            global
+                        </th>
+                        <td>
+                                                                                            <p>$post</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_after_download_content" name="method_edd_after_download_content" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_after_download_content()</h3>
+                <pre class="signature">edd_after_download_content(  <span class="argument">$content</span>) : string</pre>
+                <p><em>After Download Content</em></p>
+                <p>Adds an action to the end of download post content that can be hooked to by
+other functions.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$content </td>
+                                <td><p>The the_content field of the download object</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>the content with any additional data attached</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.8                                
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            global
+                        </th>
+                        <td>
+                                                                                            <p>$post</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_button_colors" name="method_edd_get_button_colors" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_button_colors()</h3>
+                <pre class="signature">edd_get_button_colors() : array</pre>
+                <p><em>Get Button Colors</em></p>
+                <p>Returns an array of button colors.</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>$colors Button colors</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_button_styles" name="method_edd_get_button_styles" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_button_styles()</h3>
+                <pre class="signature">edd_get_button_styles() : array</pre>
+                <p><em>Get Button Styles</em></p>
+                <p>Returns an array of button styles.</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>$styles Button styles</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.2.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_downloads_default_excerpt" name="method_edd_downloads_default_excerpt" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_downloads_default_excerpt()</h3>
+                <pre class="signature">edd_downloads_default_excerpt(string  <span class="argument">$excerpt</span>) : string</pre>
+                <p><em>Default formatting for download excerpts</em></p>
+                <p>This excerpt is primarily used in the [downloads] short code</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$excerpt </td>
+                                <td><p>Content before filtering</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>$excerpt Content after filtering</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.8.4                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_downloads_default_content" name="method_edd_downloads_default_content" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_downloads_default_content()</h3>
+                <pre class="signature">edd_downloads_default_content(string  <span class="argument">$content</span>) : string</pre>
+                <p><em>Default formatting for full download content</em></p>
+                <p>This is primarily used in the [downloads] short code</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$content </td>
+                                <td><p>Content before filtering</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>$content Content after filtering</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.8.4                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_purchase_download_links" name="method_edd_get_purchase_download_links" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_purchase_download_links()</h3>
+                <pre class="signature">edd_get_purchase_download_links(integer  <span class="argument">$payment_id</span>) : string</pre>
+                <p><em>Gets the download links for each item purchased</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$payment_id </td>
+                                <td><p>The ID of the payment to retrieve download links for</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.1.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_templates_dir" name="method_edd_get_templates_dir" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_templates_dir()</h3>
+                <pre class="signature">edd_get_templates_dir() : string</pre>
+                <p><em>Returns the path to the EDD templates directory</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_templates_url" name="method_edd_get_templates_url" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_templates_url()</h3>
+                <pre class="signature">edd_get_templates_url() : string</pre>
+                <p><em>Returns the URL to the EDD templates directory</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.3.2.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_template_part" name="method_edd_get_template_part" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_template_part()</h3>
+                <pre class="signature">edd_get_template_part(string  <span class="argument">$slug</span>, string  <span class="argument">$name = null</span>, boolean  <span class="argument">$load = true</span>) : string</pre>
+                <p><em>Retrieves a template part</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$slug </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$name </td>
+                                <td><p>Optional. Default null</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$load </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                                                            <dt>Uses</dt>
+                                                                <dd>edd_locate_template()</dd>
+                                            <dd>load_template()</dd>
+                                            <dd>get_template_part()</dd>
+                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                                                            <p>v1.2</p>
+<p>Taken from bbPress</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_locate_template" name="method_edd_locate_template" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_locate_template()</h3>
+                <pre class="signature">edd_locate_template(string|array  <span class="argument">$template_names</span>, boolean  <span class="argument">$load = false</span>, boolean  <span class="argument">$require_once = true</span>) : string</pre>
+                <p><em>Retrieve the name of the highest priority template file that exists.</em></p>
+                <p>Searches in the STYLESHEETPATH before TEMPLATEPATH so that themes which
+inherit from a parent theme can just overload one file. If the template is
+not found in either of those, it looks in the theme-compat folder last.</p>
+<p>Taken from bbPress</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string|array</td>
+                                <td>$template_names </td>
+                                <td><p>Template file(s) to search for, in order.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$load </td>
+                                <td><p>If true the template file will be loaded if it is found.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$require_once </td>
+                                <td><p>Whether to require_once or require. Default true.
+Has no effect if $load is false.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The template filename if one is located.</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_theme_template_paths" name="method_edd_get_theme_template_paths" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_theme_template_paths()</h3>
+                <pre class="signature">edd_get_theme_template_paths() : mixed|void</pre>
+                <p><em>Returns a list of paths to check for template locations</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    mixed|void
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.8.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_get_theme_template_dir_name" name="method_edd_get_theme_template_dir_name" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_get_theme_template_dir_name()</h3>
+                <pre class="signature">edd_get_theme_template_dir_name() : string</pre>
+                <p><em>Returns the template directory name.</em></p>
+                <p>Themes can filter this by using the edd_templates_dir filter.</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.6.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_add_schema_microdata" name="method_edd_add_schema_microdata" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_add_schema_microdata()</h3>
+                <pre class="signature">edd_add_schema_microdata() : boolean</pre>
+                <p><em>Should we add schema.org microdata?</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.7                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_microdata_title" name="method_edd_microdata_title" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_microdata_title()</h3>
+                <pre class="signature">edd_microdata_title(string  <span class="argument">$title</span>, integer  <span class="argument">$id</span>) : string</pre>
+                <p><em>Add Microdata to download titles</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$title </td>
+                                <td><p>Post Title</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$id </td>
+                                <td><p>Post ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>$title New title</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.5                                
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Sunny Ratilal</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_microdata_wrapper_open" name="method_edd_microdata_wrapper_open" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_microdata_wrapper_open()</h3>
+                <pre class="signature">edd_microdata_wrapper_open(  <span class="argument">$query</span>) : void</pre>
+                <p><em>Start Microdata to wrapper download</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$query </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Chris Klosowski</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_microdata_wrapper_close" name="method_edd_microdata_wrapper_close" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_microdata_wrapper_close()</h3>
+                <pre class="signature">edd_microdata_wrapper_close() : void</pre>
+                <p><em>End Microdata to wrapper download</em></p>
+                
+
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.3                                
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Chris Klosowski</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_microdata_description" name="method_edd_microdata_description" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_microdata_description()</h3>
+                <pre class="signature">edd_microdata_description(  <span class="argument">$content</span>) : mixed|void</pre>
+                <p><em>Add Microdata to download description</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$content </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed|void
+                                            &mdash; <p>New title</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.5                                
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Sunny Ratilal</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_checkout_meta_tags" name="method_edd_checkout_meta_tags" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_checkout_meta_tags()</h3>
+                <pre class="signature">edd_checkout_meta_tags() : void</pre>
+                <p><em>Add no-index and no-follow to EDD checkout and purchase confirmation pages</em></p>
+                
+
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_version_in_header" name="method_edd_version_in_header" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_version_in_header()</h3>
+                <pre class="signature">edd_version_in_header() : void</pre>
+                <p><em>Adds EDD Version to the &lt;head&gt; tag</em></p>
+                
+
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.4.2                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_is_purchase_history_page" name="method_edd_is_purchase_history_page" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_is_purchase_history_page()</h3>
+                <pre class="signature">edd_is_purchase_history_page() : boolean</pre>
+                <p><em>Determines if we&#039;re currently on the Purchase History page.</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>True if on the Purchase History page, false otherwise.</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_add_body_classes" name="method_edd_add_body_classes" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_add_body_classes()</h3>
+                <pre class="signature">edd_add_body_classes(array  <span class="argument">$class</span>) : array</pre>
+                <p><em>Adds body classes for EDD pages</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$class </td>
+                                <td><p>current classes</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>Modified array of classes</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_add_download_post_classes" name="method_edd_add_download_post_classes" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_add_download_post_classes()</h3>
+                <pre class="signature">edd_add_download_post_classes(array  <span class="argument">$classes</span>, string|array  <span class="argument">$class = &#039;&#039;</span>, integer  <span class="argument">$post_id = false</span>) : array</pre>
+                <p><em>Adds post classes for downloads</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$classes </td>
+                                <td><p>Current classes</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string|array</td>
+                                <td>$class </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$post_id </td>
+                                <td><p>The ID of the current post</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>Modified array of classes</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_add_oembed_price" name="method_edd_add_oembed_price" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_add_oembed_price()</h3>
+                <pre class="signature">edd_add_oembed_price() : void</pre>
+                <p><em>Adds Download product price to oembed display</em></p>
+                
+
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edd_remove_embed_comments_button" name="method_edd_remove_embed_comments_button" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">edd_remove_embed_comments_button()</h3>
+                <pre class="signature">edd_remove_embed_comments_button() : void</pre>
+                <p><em>Remove comments button for download embeds</em></p>
+                
+
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper">includes/template-functions.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>EDD</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.6                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+        </div>
+    </section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,4162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>Easy Digital Downloads API Documentation</title>
+    <meta name="author" content="Easy Digital Downloads"/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">
+                <img class="edd-logo" src="https://8333-presscdn-0-98-pagely.netdna-ssl.com/wp-content/themes/edd-v2/images/edd-logo.svg" alt="Easy Digital Downloads" data-fallback="https://8333-presscdn-0-98-pagely.netdna-ssl.com/wp-content/themes/edd-v2/images/edd-logo.png" width="308" height="50">
+            </a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/PayWithAmazon.html">\PayWithAmazon</a></li>
+                                                    </ul>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-482609469"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-482609469" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1178923730"></a>
+                                <a href="../namespaces/PayWithAmazon.html" style="margin-left: 30px; padding-left: 0">PayWithAmazon</a>
+            </div>
+            <div id="namespace-1178923730" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.ClientInterface.html">ClientInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.HttpCurlInterface.html">HttpCurlInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.IpnHandlerInterface.html">IpnHandlerInterface</a></li>
+                                                    <li class="interface"><a href="../classes/PayWithAmazon.ResponseInterface.html">ResponseInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/PayWithAmazon.Client.html">Client</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.EDD_Amazon_Payments.html">EDD_Amazon_Payments</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.HttpCurl.html">HttpCurl</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.IpnHandler.html">IpnHandler</a></li>
+                                                    <li class="class"><a href="../classes/PayWithAmazon.ResponseParser.html">ResponseParser</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Easy_Digital_Downloads.html">Easy_Digital_Downloads</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API.html">EDD_API</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_Keys_Table.html">EDD_API_Keys_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_Request_Log_Table.html">EDD_API_Request_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_V1.html">EDD_API_V1</a></li>
+                                                    <li class="class"><a href="../classes/EDD_API_V2.html">EDD_API_V2</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Customers_Export.html">EDD_Batch_Customers_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Downloads_Export.html">EDD_Batch_Downloads_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Downloads_Import.html">EDD_Batch_Downloads_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Export.html">EDD_Batch_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_File_Downloads_Export.html">EDD_Batch_File_Downloads_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Import.html">EDD_Batch_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Payments_Export.html">EDD_Batch_Payments_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Batch_Payments_Import.html">EDD_Batch_Payments_Import</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Cache_Helper.html">EDD_Cache_Helper</a></li>
+                                                    <li class="class"><a href="../classes/edd_cart_widget.html">edd_cart_widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Categories_Reports_Table.html">EDD_Categories_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/edd_categories_tags_widget.html">edd_categories_tags_widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_CLI.html">EDD_CLI</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Cron.html">EDD_Cron</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customer.html">EDD_Customer</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customer_Reports_Table.html">EDD_Customer_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Customers_Export.html">EDD_Customers_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB.html">EDD_DB</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB_Customer_Meta.html">EDD_DB_Customer_Meta</a></li>
+                                                    <li class="class"><a href="../classes/EDD_DB_Customers.html">EDD_DB_Customers</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Discount_Codes_Table.html">EDD_Discount_Codes_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download.html">EDD_Download</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download_History_Export.html">EDD_Download_History_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Download_Reports_Table.html">EDD_Download_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Earnings_Export.html">EDD_Earnings_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Email_Template_Tags.html">EDD_Email_Template_Tags</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Emails.html">EDD_Emails</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Export.html">EDD_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Fees.html">EDD_Fees</a></li>
+                                                    <li class="class"><a href="../classes/EDD_File_Downloads_Log_Table.html">EDD_File_Downloads_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Gateawy_Reports_Table.html">EDD_Gateawy_Reports_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Gateway_Error_Log_Table.html">EDD_Gateway_Error_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Graph.html">EDD_Graph</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Heartbeat.html">EDD_Heartbeat</a></li>
+                                                    <li class="class"><a href="../classes/EDD_HTML_Elements.html">EDD_HTML_Elements</a></li>
+                                                    <li class="class"><a href="../classes/EDD_License.html">EDD_License</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Logging.html">EDD_Logging</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Notices.html">EDD_Notices</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment.html">EDD_Payment</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment_History_Table.html">EDD_Payment_History_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payment_Stats.html">EDD_Payment_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payments_Export.html">EDD_Payments_Export</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Payments_Query.html">EDD_Payments_Query</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Pie_Graph.html">EDD_Pie_Graph</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Product_Details_Widget.html">EDD_Product_Details_Widget</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Register_Meta.html">EDD_Register_Meta</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Roles.html">EDD_Roles</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Sales_Log_Table.html">EDD_Sales_Log_Table</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Session.html">EDD_Session</a></li>
+                                                    <li class="class"><a href="../classes/EDD_SL_Plugin_Updater.html">EDD_SL_Plugin_Updater</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Stats.html">EDD_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_All_Stats.html">EDD_Tools_Recount_All_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Customer_Stats.html">EDD_Tools_Recount_Customer_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Download_Stats.html">EDD_Tools_Recount_Download_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Single_Customer_Stats.html">EDD_Tools_Recount_Single_Customer_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Recount_Store_Earnings.html">EDD_Tools_Recount_Store_Earnings</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tools_Reset_Stats.html">EDD_Tools_Reset_Stats</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Tracking.html">EDD_Tracking</a></li>
+                                                    <li class="class"><a href="../classes/EDD_Welcome.html">EDD_Welcome</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/default.html">\</a> <i class="icon-level-up"></i>
+                                            </nav>
+
+                    <h1><small>\</small>EDD_Payment</h1>
+                    <p><em>EDD_Payment Class</em></p>
+                    
+
+                    
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/EDD_Payment.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method___get" class="">__get()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method___set" class="">__set()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method___isset" class="">__isset()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_save" class="">save()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_add_download" class="">add_download()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_remove_download" class="">remove_download()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_add_fee" class="">add_fee()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_remove_fee" class="">remove_fee()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_remove_fee_by" class="">remove_fee_by()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_fees" class="">get_fees()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_add_note" class="">add_note()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_increase_tax" class="">increase_tax()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_decrease_tax" class="">decrease_tax()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_update_status" class="">update_status()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_refund" class="">refund()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_meta" class="">get_meta()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_update_meta" class="">update_meta()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_array_convert" class="">array_convert()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/EDD_Payment.html#property_ID" class="">$ID</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/EDD_Payment.html#property__ID" class="">$_ID</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_new" class="">$new</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_number" class="">$number</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_mode" class="">$mode</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_key" class="">$key</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_total" class="">$total</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_subtotal" class="">$subtotal</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_tax" class="">$tax</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_fees" class="">$fees</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_fees_total" class="">$fees_total</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_discounts" class="">$discounts</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_date" class="">$date</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_completed_date" class="">$completed_date</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_status" class="">$status</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_post_status" class="">$post_status</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_old_status" class="">$old_status</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_status_nicename" class="">$status_nicename</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_customer_id" class="">$customer_id</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_user_id" class="">$user_id</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_first_name" class="">$first_name</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_last_name" class="">$last_name</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_email" class="">$email</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_address" class="">$address</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_transaction_id" class="">$transaction_id</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_downloads" class="">$downloads</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_ip" class="">$ip</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_gateway" class="">$gateway</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_currency" class="">$currency</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_cart_details" class="">$cart_details</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_has_unlimited_downloads" class="">$has_unlimited_downloads</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_parent_payment" class="">$parent_payment</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_payment" class="">setup_payment()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_insert_payment" class="">insert_payment()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_increase_subtotal" class="">increase_subtotal()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_decrease_subtotal" class="">decrease_subtotal()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_increase_fees" class="">increase_fees()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_decrease_fees" class="">decrease_fees()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_recalculate_total" class="">recalculate_total()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_process_refund" class="">process_refund()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_process_failure" class="">process_failure()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_process_pending" class="">process_pending()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_maybe_alter_stats" class="">maybe_alter_stats()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_delete_sales_logs" class="">delete_sales_logs()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_completed_date" class="">setup_completed_date()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_mode" class="">setup_mode()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_total" class="">setup_total()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_tax" class="">setup_tax()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_fees_total" class="">setup_fees_total()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_subtotal" class="">setup_subtotal()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_discounts" class="">setup_discounts()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_currency" class="">setup_currency()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_fees" class="">setup_fees()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_gateway" class="">setup_gateway()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_transaction_id" class="">setup_transaction_id()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_ip" class="">setup_ip()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_customer_id" class="">setup_customer_id()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_user_id" class="">setup_user_id()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_email" class="">setup_email()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_user_info" class="">setup_user_info()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_address" class="">setup_address()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_payment_key" class="">setup_payment_key()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_payment_number" class="">setup_payment_number()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_cart_details" class="">setup_cart_details()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_downloads" class="">setup_downloads()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_setup_has_unlimited" class="">setup_has_unlimited()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_cart_details" class="">get_cart_details()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_completed_date" class="">get_completed_date()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_tax" class="">get_tax()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_subtotal" class="">get_subtotal()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_discounts" class="">get_discounts()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_currency" class="">get_currency()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_gateway" class="">get_gateway()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_transaction_id" class="">get_transaction_id()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_ip" class="">get_ip()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_customer_id" class="">get_customer_id()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_user_id" class="">get_user_id()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_email" class="">get_email()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_user_info" class="">get_user_info()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_address" class="">get_address()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_key" class="">get_key()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_number" class="">get_number()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_downloads" class="">get_downloads()</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#method_get_unlimited" class="">get_unlimited()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/EDD_Payment.html#property_user_info" class="">$user_info</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_payment_meta" class="">$payment_meta</a><br />
+                                                                    <a href="../classes/EDD_Payment.html#property_pending" class="">$pending</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/includes.payments.class-edd-payment.html"><div class="path-wrapper">includes/payments/class-edd-payment.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">EDD</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\EDD_Payment</div>
+                            </dd>
+
+                        
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                since
+                            </th>
+                            <td>
+                                                                    
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_ID" name="property_ID" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$ID</h3>
+                <pre class="signature">$ID : integer</pre>
+                <p><em>The Payment ID</em></p>
+                
+
+                                <h4>Type</h4>
+                integer
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property__ID" name="property__ID" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$_ID</h3>
+                <pre class="signature">$_ID : </pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_new" name="property_new" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$new</h3>
+                <pre class="signature">$new : boolean</pre>
+                <p><em>Identify if the payment is a new one or existing</em></p>
+                
+
+                                <h4>Type</h4>
+                boolean
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_number" name="property_number" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$number</h3>
+                <pre class="signature">$number : string</pre>
+                <p><em>The Payment number (for use with sequential payments)</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_mode" name="property_mode" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$mode</h3>
+                <pre class="signature">$mode : string</pre>
+                <p><em>The Gateway mode the payment was made in</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_key" name="property_key" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$key</h3>
+                <pre class="signature">$key : string</pre>
+                <p><em>The Unique Payment Key</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_total" name="property_total" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$total</h3>
+                <pre class="signature">$total : float</pre>
+                <p><em>The total amount the payment is for
+Includes items, taxes, fees, and discounts</em></p>
+                
+
+                                <h4>Type</h4>
+                float
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_subtotal" name="property_subtotal" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$subtotal</h3>
+                <pre class="signature">$subtotal : float</pre>
+                <p><em>The Subtotal fo the payment before taxes</em></p>
+                
+
+                                <h4>Type</h4>
+                float
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_tax" name="property_tax" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$tax</h3>
+                <pre class="signature">$tax : float</pre>
+                <p><em>The amount of tax for this payment</em></p>
+                
+
+                                <h4>Type</h4>
+                float
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_fees" name="property_fees" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$fees</h3>
+                <pre class="signature">$fees : array</pre>
+                <p><em>Array of global fees for this payment</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_fees_total" name="property_fees_total" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$fees_total</h3>
+                <pre class="signature">$fees_total : float</pre>
+                <p><em>The sum of the fee amounts</em></p>
+                
+
+                                <h4>Type</h4>
+                float
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_discounts" name="property_discounts" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$discounts</h3>
+                <pre class="signature">$discounts : string</pre>
+                <p><em>Any discounts applied to the payment</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_date" name="property_date" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$date</h3>
+                <pre class="signature">$date : string</pre>
+                <p><em>The date the payment was created</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_completed_date" name="property_completed_date" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$completed_date</h3>
+                <pre class="signature">$completed_date : string</pre>
+                <p><em>The date the payment was marked as &#039;complete&#039;</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_status" name="property_status" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$status</h3>
+                <pre class="signature">$status : string</pre>
+                <p><em>The status of the payment</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_post_status" name="property_post_status" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$post_status</h3>
+                <pre class="signature">$post_status : </pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_old_status" name="property_old_status" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$old_status</h3>
+                <pre class="signature">$old_status : string</pre>
+                <p><em>When updating, the old status prior to the change</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_status_nicename" name="property_status_nicename" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$status_nicename</h3>
+                <pre class="signature">$status_nicename : string</pre>
+                <p><em>The display name of the current payment status</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_customer_id" name="property_customer_id" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$customer_id</h3>
+                <pre class="signature">$customer_id : integer</pre>
+                <p><em>The customer ID that made the payment</em></p>
+                
+
+                                <h4>Type</h4>
+                integer
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_user_id" name="property_user_id" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$user_id</h3>
+                <pre class="signature">$user_id : integer</pre>
+                <p><em>The User ID (if logged in) that made the payment</em></p>
+                
+
+                                <h4>Type</h4>
+                integer
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_first_name" name="property_first_name" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$first_name</h3>
+                <pre class="signature">$first_name : string</pre>
+                <p><em>The first name of the payee</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_last_name" name="property_last_name" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$last_name</h3>
+                <pre class="signature">$last_name : string</pre>
+                <p><em>The last name of the payee</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_email" name="property_email" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$email</h3>
+                <pre class="signature">$email : string</pre>
+                <p><em>The email used for the payment</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_address" name="property_address" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$address</h3>
+                <pre class="signature">$address : array</pre>
+                <p><em>The physical address used for the payment if provided</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_transaction_id" name="property_transaction_id" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$transaction_id</h3>
+                <pre class="signature">$transaction_id : string</pre>
+                <p><em>The transaction ID returned by the gateway</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_downloads" name="property_downloads" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$downloads</h3>
+                <pre class="signature">$downloads : array</pre>
+                <p><em>Array of downloads for this payment</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_ip" name="property_ip" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$ip</h3>
+                <pre class="signature">$ip : string</pre>
+                <p><em>IP Address payment was made from</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_gateway" name="property_gateway" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$gateway</h3>
+                <pre class="signature">$gateway : string</pre>
+                <p><em>The gateway used to process the payment</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_currency" name="property_currency" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$currency</h3>
+                <pre class="signature">$currency : string</pre>
+                <p><em>The the payment was made with</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_cart_details" name="property_cart_details" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$cart_details</h3>
+                <pre class="signature">$cart_details : array</pre>
+                <p><em>The cart details array</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_has_unlimited_downloads" name="property_has_unlimited_downloads" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$has_unlimited_downloads</h3>
+                <pre class="signature">$has_unlimited_downloads : boolean</pre>
+                <p><em>Allows the files for this payment to be downloaded unlimited times (when download limits are enabled)</em></p>
+                
+
+                                <h4>Type</h4>
+                boolean
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_parent_payment" name="property_parent_payment" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$parent_payment</h3>
+                <pre class="signature">$parent_payment : integer</pre>
+                <p><em>The parent payment (if applicable)</em></p>
+                
+
+                                <h4>Type</h4>
+                integer
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_user_info" name="property_user_info" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$user_info</h3>
+                <pre class="signature">$user_info : array</pre>
+                <p><em>Legacy (not to be accessed) array of user information</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_payment_meta" name="property_payment_meta" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$payment_meta</h3>
+                <pre class="signature">$payment_meta : array</pre>
+                <p><em>Legacy (not to be accessed) payment meta array</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_pending" name="property_pending" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$pending</h3>
+                <pre class="signature">$pending : array</pre>
+                <p><em>Array of items that have changed since the last save() was run
+This is for internal use, to allow fewer update_payment_meta calls to be run</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <pre class="signature">__construct(integer  <span class="argument">$payment_id = false</span>) : mixed</pre>
+                <p><em>Setup the EDD Payments class</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$payment_id </td>
+                                <td><p>A given payment</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                            &mdash; <p>void|false</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___get" name="method___get" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__get()</h3>
+                <pre class="signature">__get(string  <span class="argument">$key</span>) : mixed</pre>
+                <p><em>Magic GET function</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$key </td>
+                                <td><p>The property</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                            &mdash; <p>The value</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___set" name="method___set" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__set()</h3>
+                <pre class="signature">__set(string  <span class="argument">$key</span>, mixed  <span class="argument">$value</span>) </pre>
+                <p><em>Magic SET function</em></p>
+                <p>Sets up the pending array for the save method</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$key </td>
+                                <td><p>The property name</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$value </td>
+                                <td><p>The value of the property</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___isset" name="method___isset" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__isset()</h3>
+                <pre class="signature">__isset(string  <span class="argument">$name</span>) : boolean</pre>
+                <p><em>Magic ISSET function, which allows empty checks on protected elements</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$name </td>
+                                <td><p>The attribute to get</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>If the item is set or not</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_save" name="method_save" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">save()</h3>
+                <pre class="signature">save() : boolean</pre>
+                <p><em>One items have been set, an update is needed to save them to the database.</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>True of the save occurred, false if it failed or wasn't needed</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_add_download" name="method_add_download" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">add_download()</h3>
+                <pre class="signature">add_download(integer  <span class="argument">$download_id</span>, array  <span class="argument">$args = array()</span>, array  <span class="argument">$options = array()</span>) : boolean</pre>
+                <p><em>Add a download to a given payment</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>The download to add</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$args </td>
+                                <td><p>Other arguments to pass to the function</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$options </td>
+                                <td><p>List of download options</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>True when successful, false otherwise</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_remove_download" name="method_remove_download" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">remove_download()</h3>
+                <pre class="signature">remove_download(integer  <span class="argument">$download_id</span>, array  <span class="argument">$args = array()</span>) : boolean</pre>
+                <p><em>Remove a download from the payment</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$download_id </td>
+                                <td><p>The download ID to remove</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$args </td>
+                                <td><p>Arguments to pass to identify (quantity, amount, price_id)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>If the item was removed or not</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_add_fee" name="method_add_fee" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">add_fee()</h3>
+                <pre class="signature">add_fee(array  <span class="argument">$args</span>, boolean  <span class="argument">$global = true</span>) : boolean</pre>
+                <p><em>Add a fee to a given payment</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$args </td>
+                                <td><p>Array of arguments for the fee to add</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$global </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>If the fee was added</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_remove_fee" name="method_remove_fee" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">remove_fee()</h3>
+                <pre class="signature">remove_fee(integer  <span class="argument">$key</span>) : boolean</pre>
+                <p><em>Remove a fee from the payment</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$key </td>
+                                <td><p>The array key index to remove</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>If the fee was removed successfully</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_remove_fee_by" name="method_remove_fee_by" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">remove_fee_by()</h3>
+                <pre class="signature">remove_fee_by(string  <span class="argument">$key</span>, integer|string  <span class="argument">$value</span>, boolean  <span class="argument">$global = false</span>) : boolean</pre>
+                <p><em>Remove a fee by the defined attributed</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$key </td>
+                                <td><p>The key to remove by</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>integer|string</td>
+                                <td>$value </td>
+                                <td><p>The value to search for</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$global </td>
+                                <td><p>False - removes the first value it fines, True - removes all matches</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>If the item is removed</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_fees" name="method_get_fees" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">get_fees()</h3>
+                <pre class="signature">get_fees(string  <span class="argument">$type = &#039;all&#039;</span>) : array</pre>
+                <p><em>Get the fees, filterable by type</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$type </td>
+                                <td><p>All, item, fee</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>The Fees for the type specified</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_add_note" name="method_add_note" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">add_note()</h3>
+                <pre class="signature">add_note(string  <span class="argument">$note = false</span>) : void</pre>
+                <p><em>Add a note to a payment</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$note </td>
+                                <td><p>The note to add</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_increase_tax" name="method_increase_tax" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">increase_tax()</h3>
+                <pre class="signature">increase_tax(float  <span class="argument">$amount = 0.0</span>) : void</pre>
+                <p><em>Increase the payment&#039;s tax by the provided amount</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$amount </td>
+                                <td><p>The amount to increase the payment tax by</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_decrease_tax" name="method_decrease_tax" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">decrease_tax()</h3>
+                <pre class="signature">decrease_tax(float  <span class="argument">$amount = 0.0</span>) : void</pre>
+                <p><em>Decrease the payment&#039;s tax by the provided amount</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$amount </td>
+                                <td><p>The amount to reduce the payment tax by</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_update_status" name="method_update_status" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">update_status()</h3>
+                <pre class="signature">update_status(string  <span class="argument">$status = false</span>) : boolean</pre>
+                <p><em>Set the payment status and run any status specific changes necessary</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$status </td>
+                                <td><p>The status to set the payment to</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>Returns if the status was successfully updated</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_refund" name="method_refund" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">refund()</h3>
+                <pre class="signature">refund() : void</pre>
+                <p><em>Change the status of the payment to refunded, and run the necessary changes</em></p>
+                
+
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.7                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_meta" name="method_get_meta" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">get_meta()</h3>
+                <pre class="signature">get_meta(string  <span class="argument">$meta_key = &#039;_edd_payment_meta&#039;</span>, boolean  <span class="argument">$single = true</span>) : mixed</pre>
+                <p><em>Get a post meta item for the payment</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$meta_key </td>
+                                <td><p>The Meta Key</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$single </td>
+                                <td><p>Return single item or array</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                            &mdash; <p>The value from the post meta</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_update_meta" name="method_update_meta" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">update_meta()</h3>
+                <pre class="signature">update_meta(string  <span class="argument">$meta_key = &#039;&#039;</span>, string  <span class="argument">$meta_value = &#039;&#039;</span>, string  <span class="argument">$prev_value = &#039;&#039;</span>) : integer|boolean</pre>
+                <p><em>Update the post meta</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$meta_key </td>
+                                <td><p>The meta key to update</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$meta_value </td>
+                                <td><p>The meta value</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$prev_value </td>
+                                <td><p>Previous meta value</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    integer|boolean
+                                            &mdash; <p>Meta ID if the key didn't exist, true on successful update, false on failure</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_array_convert" name="method_array_convert" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">array_convert()</h3>
+                <pre class="signature">array_convert() : array</pre>
+                <p><em>Converts this ojbect into an array for special cases</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>The payment object as an array</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_payment" name="method_setup_payment" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_payment()</h3>
+                <pre class="signature">setup_payment(integer  <span class="argument">$payment_id</span>) : boolean</pre>
+                <p><em>Setup payment properties</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$payment_id </td>
+                                <td><p>The payment ID</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>If the setup was successful or not</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_insert_payment" name="method_insert_payment" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">insert_payment()</h3>
+                <pre class="signature">insert_payment() : integer|boolean</pre>
+                <p><em>Create the base of a payment.</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer|boolean
+                                            &mdash; <p>False on failure, the payment ID on success.</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_increase_subtotal" name="method_increase_subtotal" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">increase_subtotal()</h3>
+                <pre class="signature">increase_subtotal(float  <span class="argument">$amount = 0.0</span>) : void</pre>
+                <p><em>Increase the payment&#039;s subtotal</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$amount </td>
+                                <td><p>The amount to increase the payment subtotal by</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_decrease_subtotal" name="method_decrease_subtotal" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">decrease_subtotal()</h3>
+                <pre class="signature">decrease_subtotal(float  <span class="argument">$amount = 0.0</span>) : void</pre>
+                <p><em>Decrease the payment&#039;s subtotal</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$amount </td>
+                                <td><p>The amount to decrease the payment subtotal by</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_increase_fees" name="method_increase_fees" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">increase_fees()</h3>
+                <pre class="signature">increase_fees(float  <span class="argument">$amount = 0.0</span>) : void</pre>
+                <p><em>Increase the payment&#039;s subtotal</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$amount </td>
+                                <td><p>The amount to increase the payment subtotal by</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_decrease_fees" name="method_decrease_fees" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">decrease_fees()</h3>
+                <pre class="signature">decrease_fees(float  <span class="argument">$amount = 0.0</span>) : void</pre>
+                <p><em>Decrease the payment&#039;s subtotal</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$amount </td>
+                                <td><p>The amount to decrease the payment subtotal by</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_recalculate_total" name="method_recalculate_total" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">recalculate_total()</h3>
+                <pre class="signature">recalculate_total() : void</pre>
+                <p><em>Set or update the total for a payment</em></p>
+                
+
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_process_refund" name="method_process_refund" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">process_refund()</h3>
+                <pre class="signature">process_refund() : void</pre>
+                <p><em>When a payment is set to a status of &#039;refunded&#039; process the necessary actions to reduce stats</em></p>
+                
+
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.7                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_process_failure" name="method_process_failure" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">process_failure()</h3>
+                <pre class="signature">process_failure() : void</pre>
+                <p><em>Process when a payment is set to failed, decrement discount usages and other stats</em></p>
+                
+
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.7                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_process_pending" name="method_process_pending" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">process_pending()</h3>
+                <pre class="signature">process_pending() : void</pre>
+                <p><em>Process when a payment moves to pending</em></p>
+                
+
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.10                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_maybe_alter_stats" name="method_maybe_alter_stats" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">maybe_alter_stats()</h3>
+                <pre class="signature">maybe_alter_stats(boolean  <span class="argument">$alter_store_earnings</span>, boolean  <span class="argument">$alter_customer_value</span>, boolean  <span class="argument">$alter_customer_purchase_count</span>) : void</pre>
+                <p><em>Used during the process of moving to refunded or pending, to decrement stats</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$alter_store_earnings </td>
+                                <td><p>If the method should alter the store earnings</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$alter_customer_value </td>
+                                <td><p>If the method should reduce the customer value</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$alter_customer_purchase_count </td>
+                                <td><p>If the method should reduce the customer's purchase count</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.10                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_delete_sales_logs" name="method_delete_sales_logs" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">delete_sales_logs()</h3>
+                <pre class="signature">delete_sales_logs() : void</pre>
+                <p><em>Delete sales logs for this purchase</em></p>
+                
+
+                
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.10                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_completed_date" name="method_setup_completed_date" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_completed_date()</h3>
+                <pre class="signature">setup_completed_date() : string</pre>
+                <p><em>Setup the payment completed date</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The date the payment was completed</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_mode" name="method_setup_mode" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_mode()</h3>
+                <pre class="signature">setup_mode() : string</pre>
+                <p><em>Setup the payment mode</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The payment mode</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_total" name="method_setup_total" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_total()</h3>
+                <pre class="signature">setup_total() : float</pre>
+                <p><em>Setup the payment total</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>The payment total</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_tax" name="method_setup_tax" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_tax()</h3>
+                <pre class="signature">setup_tax() : float</pre>
+                <p><em>Setup the payment tax</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>The tax for the payment</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_fees_total" name="method_setup_fees_total" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_fees_total()</h3>
+                <pre class="signature">setup_fees_total() : float</pre>
+                <p><em>Setup the payment fees</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>The fees total for the payment</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.10                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_subtotal" name="method_setup_subtotal" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_subtotal()</h3>
+                <pre class="signature">setup_subtotal() : float</pre>
+                <p><em>Setup the payment subtotal</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>The subtotal of the payment</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_discounts" name="method_setup_discounts" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_discounts()</h3>
+                <pre class="signature">setup_discounts() : array</pre>
+                <p><em>Setup the payments discount codes</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>Array of discount codes on this payment</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_currency" name="method_setup_currency" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_currency()</h3>
+                <pre class="signature">setup_currency() : string</pre>
+                <p><em>Setup the currency code</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The currency for the payment</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_fees" name="method_setup_fees" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_fees()</h3>
+                <pre class="signature">setup_fees() : array</pre>
+                <p><em>Setup any fees associated with the payment</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>The Fees</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_gateway" name="method_setup_gateway" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_gateway()</h3>
+                <pre class="signature">setup_gateway() : string</pre>
+                <p><em>Setup the gateway used for the payment</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The gateway</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_transaction_id" name="method_setup_transaction_id" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_transaction_id()</h3>
+                <pre class="signature">setup_transaction_id() : string</pre>
+                <p><em>Setup the transaction ID</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The transaction ID for the payment</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_ip" name="method_setup_ip" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_ip()</h3>
+                <pre class="signature">setup_ip() : string</pre>
+                <p><em>Setup the IP Address for the payment</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The IP address for the payment</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_customer_id" name="method_setup_customer_id" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_customer_id()</h3>
+                <pre class="signature">setup_customer_id() : integer</pre>
+                <p><em>Setup the customer ID</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The Customer ID</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_user_id" name="method_setup_user_id" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_user_id()</h3>
+                <pre class="signature">setup_user_id() : integer</pre>
+                <p><em>Setup the User ID associated with the purchase</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The User ID</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_email" name="method_setup_email" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_email()</h3>
+                <pre class="signature">setup_email() : string</pre>
+                <p><em>Setup the email address for the purchase</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The email address for the payment</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_user_info" name="method_setup_user_info" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_user_info()</h3>
+                <pre class="signature">setup_user_info() : array</pre>
+                <p><em>Setup the user info</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>The user info associated with the payment</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_address" name="method_setup_address" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_address()</h3>
+                <pre class="signature">setup_address() : array</pre>
+                <p><em>Setup the Address for the payment</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>The Address information for the payment</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_payment_key" name="method_setup_payment_key" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_payment_key()</h3>
+                <pre class="signature">setup_payment_key() : string</pre>
+                <p><em>Setup the payment key</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The Payment Key</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_payment_number" name="method_setup_payment_number" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_payment_number()</h3>
+                <pre class="signature">setup_payment_number() : integer|string</pre>
+                <p><em>Setup the payment number</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer|string
+                                            &mdash; <p>Integer by default, or string if sequential order numbers is enabled</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_cart_details" name="method_setup_cart_details" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_cart_details()</h3>
+                <pre class="signature">setup_cart_details() : array</pre>
+                <p><em>Setup the cart details</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>The cart details</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_downloads" name="method_setup_downloads" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_downloads()</h3>
+                <pre class="signature">setup_downloads() : array</pre>
+                <p><em>Setup the downloads array</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>Downloads associated with this payment</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setup_has_unlimited" name="method_setup_has_unlimited" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">setup_has_unlimited()</h3>
+                <pre class="signature">setup_has_unlimited() : boolean</pre>
+                <p><em>Setup the Unlimited downloads setting</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>If this payment has unlimited downloads</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_cart_details" name="method_get_cart_details" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_cart_details()</h3>
+                <pre class="signature">get_cart_details() : array</pre>
+                <p><em>Retrieve payment cart details</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>Cart details array</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_completed_date" name="method_get_completed_date" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_completed_date()</h3>
+                <pre class="signature">get_completed_date() : string</pre>
+                <p><em>Retrieve payment completion date</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Date payment was completed</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_tax" name="method_get_tax" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_tax()</h3>
+                <pre class="signature">get_tax() : float</pre>
+                <p><em>Retrieve payment tax</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>Payment tax</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_subtotal" name="method_get_subtotal" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_subtotal()</h3>
+                <pre class="signature">get_subtotal() : float</pre>
+                <p><em>Retrieve payment subtotal</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                            &mdash; <p>Payment subtotal</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_discounts" name="method_get_discounts" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_discounts()</h3>
+                <pre class="signature">get_discounts() : array</pre>
+                <p><em>Retrieve payment discounts</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>Discount codes on payment</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_currency" name="method_get_currency" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_currency()</h3>
+                <pre class="signature">get_currency() : string</pre>
+                <p><em>Retrieve payment currency</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Payment currency code</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_gateway" name="method_get_gateway" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_gateway()</h3>
+                <pre class="signature">get_gateway() : string</pre>
+                <p><em>Retrieve payment gateway</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Gateway used</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_transaction_id" name="method_get_transaction_id" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_transaction_id()</h3>
+                <pre class="signature">get_transaction_id() : string</pre>
+                <p><em>Retrieve payment transaction ID</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Transaction ID from merchant processor</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_ip" name="method_get_ip" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_ip()</h3>
+                <pre class="signature">get_ip() : string</pre>
+                <p><em>Retrieve payment IP</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Payment IP address</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_customer_id" name="method_get_customer_id" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_customer_id()</h3>
+                <pre class="signature">get_customer_id() : integer</pre>
+                <p><em>Retrieve payment customer ID</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>Payment customer ID</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_user_id" name="method_get_user_id" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_user_id()</h3>
+                <pre class="signature">get_user_id() : integer</pre>
+                <p><em>Retrieve payment user ID</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>Payment user ID</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_email" name="method_get_email" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_email()</h3>
+                <pre class="signature">get_email() : string</pre>
+                <p><em>Retrieve payment email</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Payment customer email</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_user_info" name="method_get_user_info" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_user_info()</h3>
+                <pre class="signature">get_user_info() : array</pre>
+                <p><em>Retrieve payment user info</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>Payment user info</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_address" name="method_get_address" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_address()</h3>
+                <pre class="signature">get_address() : array</pre>
+                <p><em>Retrieve payment billing address</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>Payment billing address</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_key" name="method_get_key" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_key()</h3>
+                <pre class="signature">get_key() : string</pre>
+                <p><em>Retrieve payment key</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Payment key</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_number" name="method_get_number" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_number()</h3>
+                <pre class="signature">get_number() : integer|string</pre>
+                <p><em>Retrieve payment number</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer|string
+                                            &mdash; <p>Payment number</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_downloads" name="method_get_downloads" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_downloads()</h3>
+                <pre class="signature">get_downloads() : array</pre>
+                <p><em>Retrieve downloads on payment</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>Payment downloads</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_get_unlimited" name="method_get_unlimited" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">get_unlimited()</h3>
+                <pre class="signature">get_unlimited() : boolean</pre>
+                <p><em>Retrieve unlimited file downloads status</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>Is unlimited</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            2.5.1                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    </div>
+    </section>
+</div>
+
+</body>
+</html>
